@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 24, 24, 24;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --text-color-rgb: 10, 20, 47;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,15 +14,71 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --text-color-rgb: 255, 255, 255;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+.scrolled{
+  position:sticky;
+  top:0;
+  background:rgb(var(--background-end-rgb));
+  box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+  z-index: 999;
+}
+.nav__menu{
+  list-style: none;
+}
+.nav__item{
+  position: relative;
+  display: block;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  padding: 4px 3px;
+}
+.nav__menu .nav__item:after,
+.nav__menu .nav__item:before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  display: block;
+  height: 2px;
+  transition: all 0.3s ease;
+  margin-top: 2px;
+  transition: all 300ms ease-in;
+}
+
+.nav__menu .nav__item:after {
+  bottom: 0;
+  left: 0;
+}
+
+.nav__menu .nav__item:before {
+  top: 0;
+  right: 0;
+}
+
+.nav__menu .nav__item:hover::after {
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  background-color: #27AE60;
+}
+.nav__menu .nav__item:hover::before {
+  width: 100%;
+  height: 2px;
+  top: 0;
+  background-color: #27AE60;
+}
+
+.nav__menu .nav__item.active::after {
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  background-color: #27AE60;
 }

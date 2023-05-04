@@ -1,12 +1,11 @@
 import WebLayout from "@/components/layouts/WebLayout";
 import Head from "next/head";
 
-export default function Home() {
+function About() {
   return (
     <>
       <Head>
-        <title>Home - JGFunded</title>
-
+        <title>About Us</title>
         <meta
           name="description"
           content="A marketplace where vetted and verified StartUps and Investors meet, and funding is initiated."
@@ -18,3 +17,5 @@ export default function Home() {
     </>
   );
 }
+
+export default About;

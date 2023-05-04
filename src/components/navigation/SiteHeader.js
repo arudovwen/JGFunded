@@ -1,0 +1,99 @@
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Hamburger from "hamburger-react";
+import ButtonComponent from "../ButtonComponent";
+
+import Link from "next/link";
+import MobileNav from "./MobileNav";
+import { useRouter } from "next/router";
+
+const links = [
+  {
+    title: "Products",
+    url: "",
+  },
+  {
+    title: "Use Cases",
+    url: "",
+  },
+  {
+    title: "About us",
+    url: "/about",
+  },
+  {
+    title: "Careers",
+    url: "",
+  },
+];
+
+function SiteHeader() {
+  const [isOpen, setOpen] = useState(false);
+  const [stickyClass, setStickyClass] = useState("relative");
+  const router = useRouter();
+  console.log(router)
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      const windowHeight = window.scrollY;
+      windowHeight > 500
+        ? setStickyClass("scrolled")
+        : setStickyClass("relative");
+    }
+  };
+  // Handle nav visibility on scroll
+  useEffect(() => {
+    window.addEventListener("scroll", stickNavbar);
+    return () => {
+      window.removeEventListener("scroll", stickNavbar);
+    };
+  }, []);
+  return (
+    <nav className={`w-full py-4 px-6 ${stickyClass}`}>
+      <div className={`container flex items-center justify-between`}>
+        <div className="flex items-center gap-x-10">
+          <Link href="/">
+            <Image
+              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert w-[130px] lg:w-[156px]"
+              src="/images/logo.svg"
+              alt="Fundit Logo"
+              width={156}
+              height={45}
+              priority
+            />
+          </Link>
+
+          <ul className={`hidden lg:flex items-center gap-x-10 nav__menu`}>
+            {links.map((link) => (
+              <Link key={link.title} href={link.url}>
+                {" "}
+                <li
+                  className={`text-sm  nav__item ${
+                    router.pathname === link.url && "active"
+                  }`}
+                >
+                  {link.title}
+                </li>
+              </Link>
+            ))}
+          </ul>
+        </div>
+        <div id="" className="hidden lg:flex items-center gap-x-8">
+          <Link href={"/login"}>
+            <ButtonComponent className="bg-transparent font-medium">
+              Login
+            </ButtonComponent>
+          </Link>
+          <Link href="/register">
+            <ButtonComponent>Get started</ButtonComponent>
+          </Link>
+        </div>
+        <div className="lg:hidden">
+          <Hamburger size={28} toggled={isOpen} toggle={setOpen} />
+        </div>
+      </div>
+
+      <MobileNav open={isOpen} setOpen={setOpen} />
+    </nav>
+  );
+}
+
+export default SiteHeader;
