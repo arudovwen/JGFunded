@@ -173,7 +173,7 @@ function SiteFooter() {
             {socials.map((link) => (
               <li className="text-dark font-normal text-base" key={link.name}>
                 <Link href={link.link}>
-                  <span className="w-8 h-8 rounded-full border border-[#0a142f1a] flex items-center justify-center hover:bg-primary/10">
+                  <span className="w-8 h-8 rounded-full border border-[#0a142f1a] hover:border-primary/20 flex items-center justify-center hover:bg-primary/10">
                     <Image
                       alt={link.name}
                       src={link.url}
