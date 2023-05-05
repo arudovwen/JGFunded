@@ -6,7 +6,7 @@ function WebLayout({ children }) {
   return (
     <main className={` flex min-h-screen flex-col`}>
       <SiteHeader />
-      <div className="flex-1 container">{children}</div>
+      <div className="flex-1">{children}</div>
       <div>
         <SiteFooter />
       </div>

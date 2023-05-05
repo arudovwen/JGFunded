@@ -73,12 +73,12 @@ export default function MobileNav({ open, setOpen }) {
                       </button>
                     </div>
                   </Transition.Child>
-                  <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+                  <div className="flex h-full flex-col overflow-y-scroll bg-white dark:bg-[#191A15] py-6 shadow-xl">
                     <div className="px-4 sm:px-6">
                       <Dialog.Title className="text-base font-semibold leading-6 text-gray-900 mb-10">
                         <Link href="/">
                           <Image
-                            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert w-[130px] lg:w-[156px]"
+                            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[130px] lg:w-[156px]"
                             src="/images/logo.svg"
                             alt="Fundit Logo"
                             width={156}
@@ -93,7 +93,7 @@ export default function MobileNav({ open, setOpen }) {
                         {links.map((link) => (
                           <Link key={link.title} href={link.url}>
                             {" "}
-                            <li className="text-base">{link.title}</li>
+                            <li className="text-base text-dark dark:text-white/80">{link.title}</li>
                           </Link>
                         ))}
                         <hr className="my-6 border-[#0a142f1a]" />

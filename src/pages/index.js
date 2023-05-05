@@ -13,7 +13,7 @@ export default function Home() {
         />
       </Head>
       <WebLayout>
-        <div className="h-screen"></div>
+        <div className="min-h-screen container"></div>
       </WebLayout>
     </>
   );

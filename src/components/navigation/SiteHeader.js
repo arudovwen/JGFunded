@@ -30,7 +30,7 @@ function SiteHeader() {
   const [isOpen, setOpen] = useState(false);
   const [stickyClass, setStickyClass] = useState("relative");
   const router = useRouter();
-  console.log(router)
+  
   const stickNavbar = () => {
     if (window !== undefined) {
       const windowHeight = window.scrollY;
@@ -47,12 +47,12 @@ function SiteHeader() {
     };
   }, []);
   return (
-    <nav className={`w-full py-4 px-6 ${stickyClass}`}>
+    <nav className={`w-full py-4 px-6 ${stickyClass} bg-white dark:bg-black`}>
       <div className={`container flex items-center justify-between`}>
         <div className="flex items-center gap-x-10">
           <Link href="/">
             <Image
-              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert w-[130px] lg:w-[156px]"
+              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[130px] lg:w-[156px]"
               src="/images/logo.svg"
               alt="Fundit Logo"
               width={156}
@@ -66,7 +66,7 @@ function SiteHeader() {
               <Link key={link.title} href={link.url}>
                 {" "}
                 <li
-                  className={`text-sm  nav__item ${
+                  className={`text-sm  nav__item text-dark dark:text-white ${
                     router.pathname === link.url && "active"
                   }`}
                 >
@@ -87,7 +87,7 @@ function SiteHeader() {
           </Link>
         </div>
         <div className="lg:hidden">
-          <Hamburger size={28} toggled={isOpen} toggle={setOpen} />
+          <Hamburger size={28} toggled={isOpen} toggle={setOpen} color="#27AE60"/>
         </div>
       </div>
 
