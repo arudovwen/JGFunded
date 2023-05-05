@@ -57,8 +57,7 @@ function SiteHeader() {
               alt="Fundit Logo"
               width={156}
               height={45}
-              priority
-              
+              priority 
             />
           </Link>
 
