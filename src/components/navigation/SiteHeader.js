@@ -52,12 +52,13 @@ function SiteHeader() {
         <div className="flex items-center gap-x-10">
           <Link href="/">
             <Image
-              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[130px] lg:w-[156px]"
+              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[130px] lg:w-[156px] h-auto"
               src="/images/logo.svg"
               alt="Fundit Logo"
               width={156}
               height={45}
               priority
+              
             />
           </Link>
 

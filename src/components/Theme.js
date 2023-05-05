@@ -18,7 +18,8 @@ export const toSystemMode = () => {
   updateTheme();
  
 };
-function updateTheme() {
+export function updateTheme() {
+    console.log(localStorage.theme )
   if (!("theme" in localStorage)) {
     localStorage.theme = "system";
   }
