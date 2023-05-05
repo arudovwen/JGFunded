@@ -34,18 +34,18 @@ function WeHelp() {
   return (
     <section className="py-20 container px-6 xl:px-0">
       <ScrollAnimation animateOnce animateIn="fade-in-bottom">
-        <h1 className="text-[#1E1E26] dark:text-white/90 text-4xl lg:text-[50px] font-bold leading-[50px] lg:leading-[60px] mb-3 text-center max-w-[500px] lg:max-w-[800px] mx-auto">
+        <h2 className="text-[#1E1E26] dark:text-white/90 text-4xl lg:text-[50px] font-bold leading-[50px] lg:leading-[60px] mb-3 text-center max-w-[500px] lg:max-w-[800px] mx-auto">
           We help{" "}
           <span className="text-shadow-drop-center text-primary relative img_under after:content-[url('/images/line.svg')] after:w-full after:absolute after:left-[6%] lg:after:left-[16%] after:bottom-[-50%] lg:after:bottom-[-33%]">
             StartUps
           </span>{" "}
           get there products seen.
-        </h1>
-        <h2 className="text-[#333333] dark:text-white/80 text-base font-normal mb-8 sm:mb-12 mx-auto max-w-[760px] text-center">
+        </h2>
+        <p className="text-[#333333] dark:text-white/80 text-base font-normal mb-8 sm:mb-12 mx-auto max-w-[760px] text-center">
           Are you a Startup? You don't have to wait any longer until someone is
           responding to your deal. You can now actively search your matching
           investor and get funded from small private investors to large VC's
-        </h2>
+        </p>
         <div className="grid lg:grid-cols-2 gap-16">
           <div className="banner__image h-[300px] lg:h-[500px] bg-center lg:bg-right block sm:hidden lg:block"></div>
           <div>

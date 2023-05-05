@@ -46,7 +46,7 @@ function Banner() {
         <div className="flex-1 hidden sm:flex xl:hidden">
           <TbArrowBigRightLineFilled className="text-shadow-drop-center w-16 h-16 text-primary" />
         </div>
-        <div className="fade-in-bottom max-w-[568px] w-full ml-auto h-[300px] lg:h-[500px] rounded-[40px] overflow-hidden bg-no-repeat bg-cover drop-shadow-[(0px_24px_54px_rgba(40,41,61,0.2))] bg-[linear-gradient(189.18deg,#00000040_6.96%,#00000050_99.86%),url('/images/bimg.png')]">
+        <div className="fade-in-bottom max-w-[568px] w-full ml-auto h-[300px] lg:h-[500px] rounded-[40px] overflow-hidden bg-no-repeat bg-cover drop-shadow-[(0px_24px_54px_rgba(40,41,61,0.2))] bg-[linear-gradient(189.18deg,#00000040_6.96%,#00000050_99.86%),url('/images/bimg.webp')]">
           <div className="w-full h-full flex flex-col items-start justify-end px-4 sm:px-8 py-8">
             <Carousel
               className="w-full banner__carousel"

@@ -58,11 +58,11 @@ function Fifth() {
           <div className="relative">
             <ScrollAnimation animateOnce animateIn="fade-in-bottom">
               <Image
-                src="/images/analytics.png"
+                src="/images/analytics.webp"
                 width={528}
                 height={428}
                 alt="dealflow"
-                className=" h-auto w-full max-w-[528px] ml-auto"
+                className="h-auto w-full max-w-[528px] ml-auto"
               />
             </ScrollAnimation>
           </div>

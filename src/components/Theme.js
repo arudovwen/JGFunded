@@ -21,7 +21,7 @@ export const toSystemMode = () => {
 export function updateTheme() {
     console.log(localStorage.theme )
   if (!("theme" in localStorage)) {
-    localStorage.theme = "system";
+    localStorage.theme = "light";
   }
   switch (localStorage.theme) {
     case "system":

@@ -22,7 +22,7 @@ function Fourth() {
       <div className="relative">
        <ScrollAnimation animateOnce  animateIn="fade-in-bottom">
         <Image
-          src="/images/portfolio.png"
+          src="/images/innovate.webp"
           width={636}
           height={428}
           alt="dealflow"

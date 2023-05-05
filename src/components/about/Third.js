@@ -8,7 +8,7 @@ function Third() {
       <div className="relative order-2 lg:order-1">
          <ScrollAnimation animateOnce  animateIn="fade-in-bottom">
           <Image
-            src="/images/innovate.png"
+            src="/images/portfolio.webp"
             width={636}
             height={428}
             alt="dealflow"

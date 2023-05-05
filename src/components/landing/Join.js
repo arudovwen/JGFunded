@@ -14,9 +14,9 @@ function Join() {
     <section className="bg-[#F2FCF4] dark:bg-dark py-[100px] lg:py-[120px] px-6 lg:px-[128px]">
       <ScrollAnimation animateOnce animateIn="fade-in-bottom">
         <div className="container">
-          <h3 className="text-[#333333] mb-4 dark:text-white/90 text-3xl sm:text-4xl xl:text-7xl text-center">
+          <h2 className="text-[#333333] mb-4 dark:text-white/90 text-3xl sm:text-4xl xl:text-7xl text-center">
             Join our platform and enhance your chances for securing funding
-          </h3>
+          </h2>
           <p className="text-center mb-14 text-base lg:text-xl text-[#828282] dark:text-white/80 max-w-[600px] mx-auto">
             Maximize your funding potential by connecting with our extensive
             network of investors.

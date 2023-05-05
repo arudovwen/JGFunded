@@ -38,7 +38,7 @@ function Benefits() {
       <div className="relative">
         <ScrollAnimation animateOnce animateIn="fade-in">
           <Image
-            src="/images/benefit.png"
+            src="/images/benefit.webp"
             width={636}
             height={428}
             alt="dealflow"

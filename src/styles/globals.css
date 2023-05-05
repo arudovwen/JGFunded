@@ -270,7 +270,7 @@ html[color-theme="system"] #header__indeterminate {
 }
 
 .banner__image {
-  background-image: url("/images/startup.png");
+  background-image: url("/images/startup.webp");
   background-size: contain;
   background-repeat: no-repeat;
 }
