@@ -25,7 +25,7 @@ function Banner() {
           and funding is initiated.
         </h2>
         <div className="flex flex-col sm:flex-row gap-8 items-center">
-         <Link href="#waitlist" scroll={false}>
+         <Link href="#waitlist" scroll={false} className="w-full sm:w-auto">
          <ButtonComponent className="bg-primary text-white text-sm justify-center lg:text-base px-5 w-full sm:w-auto">
             Join Waitlist
           </ButtonComponent></Link>

@@ -22,6 +22,10 @@ const links = [
     title: "Careers",
     url: "",
   },
+  {
+    title: "Contact Us",
+    url: "/contact-us",
+  },
 ];
 
 export default function MobileNav({ open, setOpen }) {
@@ -98,12 +102,12 @@ export default function MobileNav({ open, setOpen }) {
                         ))}
                         <hr className="my-6 border-[#0a142f1a]" />
                        <div className="flex justify-center">
-                       <Link href={"/login"}>
+                       <Link href={"/"}>
                           <ButtonComponent className="bg-transparent font-medium">
                             Login
                           </ButtonComponent>
                         </Link>
-                        <Link href="/register">
+                        <Link href="/">
                           <ButtonComponent className="text-sm">Get started</ButtonComponent>
                         </Link>
                        </div>
