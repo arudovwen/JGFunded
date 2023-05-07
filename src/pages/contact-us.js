@@ -34,7 +34,8 @@ function contactUs() {
   return (
     <WebLayout>
       <section className="pt-20 lg:pb-20 relative">
-        <div className="container sm:mb-16  px-6 xl:px-0">
+        <div className="container sm:mb-16  px-6 xl:px-0 relative">
+       
           <h2 className="text-[#191A15] dark:text-white/90 text-3xl lg:text-[40px] lg:leading-[60px] mb-4 font-bold">
             Get in Touch with Us
           </h2>
@@ -57,9 +58,8 @@ function contactUs() {
               </p>
             </div>
           </div>
-        </div>
-        <div className="container  max-w-[450px] bg-white dark:bg-dark p-6 sm:p-12 rounded-[20px] sm:shadow-[0px_0px_60px_1px_rgba(0,0,0,0.1)] lg:absolute right-[5%] top-[80px] my-8 lg:my-0">
-          <form className="sm:min-w-[327px]">
+          <div className="w-full !max-w-[450px] bg-white dark:bg-dark p-6 sm:p-12 rounded-[20px] sm:shadow-[0px_0px_60px_1px_rgba(0,0,0,0.1)] lg:absolute sm:right-[24px] xl:right-0 top-0 my-8 lg:my-0">
+          <form className="">
             <legend className="text-[#170D33] dark:text-white/80 text-2xl font-medium mb-8">
               Send us a message
             </legend>
@@ -88,7 +88,7 @@ function contactUs() {
               <div className="flex gap-x-2">
                 <select
                   defaultValue={234}
-                  className="bg-white text-[15px] px-2 py-2 rounded-lg text-[#333] w-[80px] border border-[#D1CFD6]"
+                  className="bg-white dark:bg-white/60 text-[15px] px-2 py-2 rounded-lg text-[#333] w-[80px] border border-[#D1CFD6]"
                 >
                   <option value={234}>+234</option>
                 </select>
@@ -129,6 +129,8 @@ function contactUs() {
             </div>
           </form>
         </div>
+        </div>
+       
         <div className="bg-[#F2FCF4] dark:bg-[#313b33] py-12">
           <div className="grid lg:grid-cols-2 gap-x-12 container  px-6 xl:px-0">
             <div>

@@ -11,7 +11,7 @@ function Join() {
     "/images/clarit.svg",
   ];
   return (
-    <section className="bg-[#F2FCF4] dark:bg-dark py-[100px] lg:py-[120px] px-6 lg:px-[128px]">
+    <section className="bg-[#F2FCF4] dark:bg-[#313b33] py-[100px] lg:py-[120px] px-6 lg:px-[128px]">
       <ScrollAnimation animateOnce animateIn="fade-in-bottom">
         <div className="container">
           <h2 className="text-[#333333] mb-4 dark:text-white/90 text-3xl sm:text-4xl xl:text-7xl text-center">

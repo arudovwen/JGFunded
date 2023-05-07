@@ -77,6 +77,7 @@ function Waitlist() {
                     Email address
                   </label>
                   <input
+                  type="email"
                     className="w-full bg-white px-4 py-4 rounded-lg"
                     placeholder="example@mail.com"
                   />
@@ -94,7 +95,7 @@ function Waitlist() {
                     <option value={2}>Investor</option>
                   </select>
                 </div>
-                <div className="mb-10">
+                {/* <div className="mb-10">
                   <label className="text-[#686878] text-sm mb-2 block">
                     Message
                   </label>
@@ -102,7 +103,7 @@ function Waitlist() {
                     className="w-full bg-white px-4 py-4 rounded-lg"
                     rows="4"
                   ></textarea>
-                </div>
+                </div> */}
                 <div>
                   <a
                     target="_blank"
