@@ -3,7 +3,7 @@ import React from "react";
 
 function Second() {
   return (
-    <section className="container grid grid-cols-1 xl:grid-cols-2 gap-x-10 lg:gap-x-[58px] rounded-[40px] bg-[#F2FCF4] dark:bg-[#677c6b] mb-28 lg:mb-[140px] fade-in-bottom">
+    <section className="container grid grid-cols-1 xl:grid-cols-2 gap-x-10 lg:gap-x-[58px] rounded-[40px] bg-[#F2FCF4] dark:bg-[#313b33] mb-28 lg:mb-[140px] fade-in-bottom">
       <div className="px-10 lg:px-20  py-12 lg:py-[60px] text-center lg:text-left">
         <h2 className="text-[#191A15] dark:text-white/90 text-2xl lg:text-[32px] mb-4 font-bold">
           Highly-Selective Dealflow

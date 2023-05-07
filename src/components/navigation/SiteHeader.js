@@ -20,9 +20,13 @@ const links = [
     title: "About us",
     url: "/about",
   },
+  // {
+  //   title: "Careers",
+  //   url: "",
+  // },
   {
-    title: "Careers",
-    url: "",
+    title: "Contact Us",
+    url: "/contact-us",
   },
 ];
 
@@ -30,7 +34,7 @@ function SiteHeader() {
   const [isOpen, setOpen] = useState(false);
   const [stickyClass, setStickyClass] = useState("relative");
   const router = useRouter();
-  
+
   const stickNavbar = () => {
     if (window !== undefined) {
       const windowHeight = window.scrollY;
@@ -57,11 +61,11 @@ function SiteHeader() {
               alt="Fundit Logo"
               width={156}
               height={45}
-              priority 
+              priority
             />
           </Link>
 
-          <ul className={`hidden lg:flex items-center gap-x-10 nav__menu`}>
+          <ul className={`hidden lg:flex items-center gap-x-8 nav__menu`}>
             {links.map((link) => (
               <Link key={link.title} href={link.url}>
                 {" "}
@@ -87,7 +91,12 @@ function SiteHeader() {
           </Link>
         </div>
         <div className="lg:hidden">
-          <Hamburger size={28} toggled={isOpen} toggle={setOpen} color="#27AE60"/>
+          <Hamburger
+            size={28}
+            toggled={isOpen}
+            toggle={setOpen}
+            color="#27AE60"
+          />
         </div>
       </div>
 

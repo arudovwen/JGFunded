@@ -132,7 +132,7 @@ function SiteFooter() {
               ))}
             </div>
           </ScrollAnimation>
-          <div className="bg-[#F2FCF4] dark:bg-[#2c342e] mix-blend-normal text-center lg:text-left lg:w-[338px] px-6 md:px-10 py-4 md:py-8">
+          <div className="bg-[#F2FCF4] dark:bg-[#313b33] mix-blend-normal text-center lg:text-left lg:w-[338px] px-6 md:px-10 py-4 md:py-8">
             <ScrollAnimation animateOnce animateIn="fade-in">
               <form>
                 <legend className="text-dark dark:text-white/90 font-bold mb-4">

@@ -51,23 +51,23 @@ function WeHelp() {
           <div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
               {content.map((item, index) => (
-                <div key={`${index}text`}>
-                  {index === 0 && 
-                    <RxSpeakerLoud className="w-8 h-8 text-[#333333] dark:text-white/80 mb-4" />
-                  }
+                <div key={`${index}text`} className="text-center lg:text-left">
+                  {index === 0 && (
+                    <RxSpeakerLoud className="w-8 h-8 text-[#333333] dark:text-white/80 mb-4 mx-auto lg:mx-0" />
+                  )}
                   {index === 3 && (
-                    <HiOutlineUserGroup className="w-8 h-8 text-[#333333] dark:text-white/80 mb-4" />
+                    <HiOutlineUserGroup className="w-8 h-8 text-[#333333] dark:text-white/80 mb-4  mx-auto lg:mx-0" />
                   )}
                   {index === 1 && (
-                    <TbUsers className="w-8 h-8 text-[#333333] dark:text-white/80 mb-4" />
+                    <TbUsers className="w-8 h-8 text-[#333333] dark:text-white/80 mb-4  mx-auto lg:mx-0" />
                   )}
                   {index === 2 && (
-                    <RiUserSearchLine className="w-8 h-8 text-[#333333] dark:text-white/80 mb-4" />
-                  )} 
+                    <RiUserSearchLine className="w-8 h-8 text-[#333333] dark:text-white/80 mb-4  mx-auto lg:mx-0" />
+                  )}
                   <h4 className="font-bold text-base lg:text-2xl text-[#333333] dark:text-white/80 mb-1 lg:mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-[#333333] dark:text-white/80 text-[13px] lg:text-sm">
+                  <p className="text-[#333333] dark:text-white/80 text-[13px] lg:text-sm max-w-[350px] mx-auto">
                     {item.text}
                   </p>
                 </div>

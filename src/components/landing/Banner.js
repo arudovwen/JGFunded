@@ -8,6 +8,7 @@ import {
 import { RiBarChartFill } from "react-icons/ri";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import Link from "next/link";
 
 function Banner() {
   return (
@@ -24,9 +25,10 @@ function Banner() {
           and funding is initiated.
         </h2>
         <div className="flex flex-col sm:flex-row gap-8 items-center">
-          <ButtonComponent className="bg-primary text-white text-sm justify-center lg:text-base px-5 w-full sm:w-auto">
+         <Link href="#waitlist" scroll={false}>
+         <ButtonComponent className="bg-primary text-white text-sm justify-center lg:text-base px-5 w-full sm:w-auto">
             Join Waitlist
-          </ButtonComponent>
+          </ButtonComponent></Link>
           <button className="text-[#686D77] dark:text-white/80 flex items-center gap-x-3 lg:gap-x-5 text-sm lg:text-base">
             {" "}
             <Image
@@ -36,7 +38,7 @@ function Banner() {
               alt="play icon"
               className="w-[46px] h-[46px] lg:w-auto lg:h-auto"
             />{" "}
-            Play Demo
+            Book Demo
           </button>
         </div>
         <TbArrowBigDownLineFilled className="text-shadow-drop-center w-16 h-16 text-primary absolute top-2 right-0 hidden sm:flex xl:hidden" />
