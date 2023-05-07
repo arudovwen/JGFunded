@@ -1,1 +1,1 @@
-JGFunded
+JGFunded.com
