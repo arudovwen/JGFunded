@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import WebLayout from "@/components/layouts/WebLayout";
@@ -7,35 +8,50 @@ import Link from "next/link";
 import ButtonComponent from "../components/ButtonComponent";
 
 function contactUs() {
+  const [name, setName] = React.useState("");
+  const [companyName, setCompanyName] = React.useState("");
+  const [phoneNumber, setPhoneNumber] = React.useState("");
+  const [message, setMessage] = React.useState("");
   const socials = [
     {
       name: "linkedin",
       url: "/images/lk.svg",
-      link: "https://linkedin.com",
+      link: "https://www.linkedin.com/company/jxtgotfunded/",
       w: 12,
       h: 12,
     },
     {
-      name: "facebook",
-      url: "/images/fb.svg",
-      link: "https://facebook.com",
-      w: 7,
+      name: "telegram",
+      url: "/images/telegram.svg",
+      link: "https://t.me/+1T9ga6pxTx1hYzQ0",
+      w: 12,
       h: 12,
     },
     {
-      name: "twitter",
-      url: "/images/twitter.svg",
-      link: "https://twitter.com",
+      name: "gmail",
+      url: "/images/gmail.svg",
+      link: "mailto:juxtgotfunded@gmail.com",
       w: 12,
       h: 10,
     },
   ];
+  function sendMail(e) {
+    if (!name || !companyName || !phoneNumber || !message) return;
+    e.preventDefault();
+
+    const body = `Full name: ${name} \nCompany name: ${companyName} \nPhone number: 234-${phoneNumber} \nMessage: ${message}`;
+    window.open(
+      `mailto:juxtgotfunded@gmail.com?subject=Contact mail&body=${encodeURIComponent(
+        body
+      )}`,
+      "_blank"
+    );
+  }
 
   return (
     <WebLayout>
       <section className="pt-20 lg:pb-20 relative">
         <div className="container sm:mb-16  px-6 xl:px-0 relative">
-       
           <h2 className="text-[#191A15] dark:text-white/90 text-3xl lg:text-[40px] lg:leading-[60px] mb-4 font-bold">
             Get in Touch with Us
           </h2>
@@ -59,78 +75,86 @@ function contactUs() {
             </div>
           </div>
           <div className="w-full !max-w-[450px] bg-white dark:bg-dark p-6 sm:p-12 rounded-[20px] sm:shadow-[0px_0px_60px_1px_rgba(0,0,0,0.1)] lg:absolute sm:right-[24px] xl:right-0 top-0 my-8 lg:my-0">
-          <form className="">
-            <legend className="text-[#170D33] dark:text-white/80 text-2xl font-medium mb-8">
-              Send us a message
-            </legend>
-            <div className="mb-6">
-              <label className="text-[#686878] dark:text-white/60 text-sm mb-2 block">
-                Full name
-              </label>
-              <input
-                className="w-full text-[15px] bg-white dark:bg-white/60  px-4 py-3 rounded-lg border border-[#D1CFD6]"
-                placeholder="Provide your full name"
-              />
-            </div>
-            <div className="mb-6">
-              <label className="text-[#686878] dark:text-white/60 text-sm mb-2 block">
-                Company name
-              </label>
-              <input
-                className="w-full text-[15px] bg-white dark:bg-white/60  px-4 py-3 rounded-lg  border border-[#D1CFD6]"
-                placeholder="Provide your comapany name"
-              />
-            </div>
-            <div className="mb-6">
-              <label className="text-[#686878]  dark:text-white/60 text-sm mb-2 block">
-                Phone number
-              </label>
-              <div className="flex gap-x-2">
-                <select
-                  defaultValue={234}
-                  className="bg-white dark:bg-white/60 text-[15px] px-2 py-2 rounded-lg text-[#333] w-[80px] border border-[#D1CFD6]"
-                >
-                  <option value={234}>+234</option>
-                </select>
+            <form className="" onSubmit={sendMail}>
+              <legend className="text-[#170D33] dark:text-white/80 text-2xl font-medium mb-8">
+                Send us a message
+              </legend>
+              <div className="mb-6">
+                <label className="text-[#686878] dark:text-white/60 text-sm mb-2 block">
+                  Full name
+                </label>
                 <input
-                  type="email"
-                  className="flex-1 text-[15px] bg-white dark:bg-white/60 px-4 py-3 rounded-lg  border border-[#D1CFD6]"
-                  placeholder="example@mail.com"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="w-full text-[15px] bg-white dark:bg-white/60  px-4 py-3 rounded-lg border border-[#D1CFD6]"
+                  placeholder="Provide your full name"
                 />
               </div>
-            </div>
-            <div className="mb-6">
-              <label className="text-[#686878]  dark:text-white/60 text-sm mb-2 block">
-                Work Email
-              </label>
-              <input
-                type="email"
-                className="w-full text-[15px] bg-white dark:bg-white/60 px-4 py-3 rounded-lg  border border-[#D1CFD6] leading-normal"
-                placeholder="example@mail.com"
-              />
-            </div>
+              <div className="mb-6">
+                <label className="text-[#686878] dark:text-white/60 text-sm mb-2 block">
+                  Company name
+                </label>
+                <input
+                  value={companyName}
+                  onChange={(e) => setCompanyName(e.target.value)}
+                  className="w-full text-[15px] bg-white dark:bg-white/60  px-4 py-3 rounded-lg  border border-[#D1CFD6]"
+                  placeholder="Provide your comapany name"
+                />
+              </div>
+              <div className="mb-6">
+                <label className="text-[#686878]  dark:text-white/60 text-sm mb-2 block">
+                  Phone number
+                </label>
+                <div className="flex gap-x-2">
+                  <select
+                    defaultValue={234}
+                    className="bg-white dark:bg-white/60 text-[15px] px-2 py-2 rounded-lg text-[#333] w-[80px] border border-[#D1CFD6]"
+                  >
+                    <option value={234}>+234</option>
+                  </select>
+                  <input
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    type="number"
+                    className="flex-1 text-[15px] bg-white dark:bg-white/60 px-4 py-3 rounded-lg  border border-[#D1CFD6]"
+                    placeholder="8102457578"
+                  />
+                </div>
+              </div>
+              {/* <div className="mb-6">
+                <label className="text-[#686878]  dark:text-white/60 text-sm mb-2 block">
+                  Work Email
+                </label>
+                <input
+                  type="email"
+                  className="w-full text-[15px] bg-white dark:bg-white/60 px-4 py-3 rounded-lg  border border-[#D1CFD6] leading-normal"
+                  placeholder="example@mail.com"
+                />
+              </div> */}
 
-            <div className="mb-10">
-              <label className="text-[#686878] dark:text-white/60 text-sm mb-2 block">
-                Your message
-              </label>
-              <textarea
-                className="w-full text-[15px] bg-white dark:bg-white/60  px-4 py-3 rounded-lg  border border-[#D1CFD6]"
-                rows="3"
-              ></textarea>
-            </div>
-            <div>
-              <ButtonComponent
-                type="button"
-                className="bg-primary text-white w-full text-center justify-center"
-              >
-                Submit
-              </ButtonComponent>
-            </div>
-          </form>
+              <div className="mb-10">
+                <label className="text-[#686878] dark:text-white/60 text-sm mb-2 block">
+                  Your message
+                </label>
+                <textarea
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  className="w-full text-[15px] bg-white dark:bg-white/60  px-4 py-3 rounded-lg  border border-[#D1CFD6]"
+                  rows="3"
+                ></textarea>
+              </div>
+              <div>
+                <ButtonComponent
+                  type="submit"
+                  className="bg-primary text-white w-full text-center justify-center"
+                >
+                  Submit
+                </ButtonComponent>
+              </div>
+            </form>
+          </div>
         </div>
-        </div>
-       
+
         <div className="bg-[#F2FCF4] dark:bg-[#313b33] py-12">
           <div className="grid lg:grid-cols-2 gap-x-12 container  px-6 xl:px-0">
             <div>

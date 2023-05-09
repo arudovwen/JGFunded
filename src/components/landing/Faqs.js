@@ -3,7 +3,7 @@ import AccordionLayout from "../layouts/AccordionLayout";
 import ScrollAnimation from "react-animate-on-scroll";
 
 function Faqs() {
-  const [activeIndex, setActiveIndex] = React.useState(1);
+  const [activeIndex, setActiveIndex] = React.useState(0);
   const content = [
     {
       icon: "",
@@ -23,11 +23,11 @@ function Faqs() {
     {
       icon: "",
       title: "How does billing work?",
-      text: "We build community ",
+      text: "",
     },
   ];
   return (
-    <section className="container py-20 px-6 xl:px-0">
+    <section className="container py-20 px-6 xl:px-0" id="faqs">
       <ScrollAnimation animateOnce animateIn="fade-in-bottom">
         <h3 className="text-[#101828] font-bold mb-4 dark:text-white/90 text-3xl lg:text-4xl text-center">
           Frequently asked questions

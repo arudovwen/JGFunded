@@ -8,22 +8,22 @@ import MobileNav from "./MobileNav";
 import { useRouter } from "next/router";
 
 const links = [
-  {
-    title: "Products",
-    url: "",
-  },
-  {
-    title: "Use Cases",
-    url: "",
-  },
+  // {
+  //   title: "Products",
+  //   url: "",
+  // },
+  // {
+  //   title: "Use Cases",
+  //   url: "",
+  // },
   {
     title: "About us",
     url: "/about",
   },
-  // {
-  //   title: "Careers",
-  //   url: "",
-  // },
+  {
+    title: "Careers",
+    url: "",
+  },
   {
     title: "Contact Us",
     url: "/contact-us",

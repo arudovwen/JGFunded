@@ -8,21 +8,24 @@ const links = [
   {
     heading: "Company",
     links: [
-      {
-        title: "Products",
-        url: "#",
-      },
+      // {
+      //   title: "Products",
+      //   url: "#",
+      //   target:"_self"
+      // },
       {
         title: "Pricing",
         url: "#pricing",
+        target:"_self"
       },
-      {
-        title: "Use cases",
-        url: "#",
-      },
+      // {
+      //   title: "Use cases",
+      //   url: "#",
+      // },
       {
         title: "Careers",
         url: "#",
+        target:"_self"
       },
     ],
   },
@@ -31,16 +34,18 @@ const links = [
     links: [
       {
         title: "Talk to support",
-        url: "#",
+        url: "https://t.me/+1T9ga6pxTx1hYzQ0",
+        target:"_blank"
       },
       {
         title: "Support docs",
-        url: "#",
+        url: "#faqs",
+        target:"_self"
       },
-      {
-        title: "System status",
-        url: "#",
-      },
+      // {
+      //   title: "System status",
+      //   url: "#",
+      // },
     ],
   },
   {
@@ -48,19 +53,22 @@ const links = [
     links: [
       {
         title: "Help Centre",
-        url: "#",
+        url: "https://t.me/+1T9ga6pxTx1hYzQ0",
+        target: "_blank"
       },
-      {
-        title: "Account Information ",
-        url: "/#",
-      },
+      // {
+      //   title: "Account Information ",
+      //   url: "/#",
+      // },
       {
         title: "About",
         url: "/about",
+        target: "_self"
       },
       {
         title: "Contact Us",
         url: "/contact-us",
+        target:"_self"
       },
     ],
   },
@@ -69,21 +77,21 @@ const socials = [
   {
     name: "linkedin",
     url: "/images/lk.svg",
-    link: "https://linkedin.com",
+    link: "https://www.linkedin.com/company/jxtgotfunded/",
     w: 12,
     h: 12,
   },
   {
-    name: "facebook",
-    url: "/images/fb.svg",
-    link: "https://facebook.com",
-    w: 7,
+    name: "telegram",
+    url: "/images/telegram.svg",
+    link: "https://t.me/+1T9ga6pxTx1hYzQ0",
+    w: 12,
     h: 12,
   },
   {
-    name: "twitter",
-    url: "/images/twitter.svg",
-    link: "https://twitter.com",
+    name: "gmail",
+    url: "/images/gmail.svg",
+    link: "mailto:juxtgotfunded@gmail.com",
     w: 12,
     h: 10,
   },
@@ -92,15 +100,15 @@ const socials = [
 const securities = [
   {
     name: "terms",
-    url: "",
+    url: "#",
   },
   {
     name: "privacy",
-    url: "",
+    url: "#",
   },
   {
     name: "cookies",
-    url: "",
+    url: "#",
   },
 ];
 
@@ -125,7 +133,7 @@ function SiteFooter() {
                       className="text-dark dark:text-white/80 opacity-50 font-normal text-sm lg:text-base mb-3 hover:opacity-80"
                       key={link.title}
                     >
-                      <Link href={link.url}> {link.title}</Link>
+                      <Link href={link.url} target={link.target} scroll={false}> {link.title}</Link>
                     </li>
                   ))}
                 </ul>
@@ -188,17 +196,17 @@ function SiteFooter() {
           <ul className="flex gap-x-2 sm:gap-x-4 items-center">
             {socials.map((link) => (
               <li className="text-dark font-normal text-base" key={link.name}>
-                <Link href={link.link}>
+                <a href={link.link} target="_blank">
                   <span className="w-8 h-8 rounded-full border border-[#0a142f1a] hover:border-primary/20 flex items-center justify-center hover:bg-primary/10 dark:bg-white">
                     <Image
                       alt={link.name}
                       src={link.url}
                       width={link.w}
                       height={link.h}
-                      className="w-auto h-auto"
+                      className="w-4 h-auto"
                     />
                   </span>
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

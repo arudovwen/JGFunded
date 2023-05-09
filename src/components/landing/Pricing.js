@@ -32,9 +32,9 @@ const plans = [
   {
     name: "standard",
     price: "25",
-    description: "A detailed wireframe kit made of comprehensive components.",
+    description: "",
     uses: [
-      "AdvertiAdvertisement",
+      "Advertisement",
       "Account sucess manager",
       "Unlimited Matched ",
       "Accelerator  Program",
@@ -46,7 +46,7 @@ const plans = [
 function Pricing() {
   const [active, setActive] = React.useState(0);
   return (
-    <section className="container text-center py-20 px-6 xl:px-0">
+    <section className="container text-center py-20 px-6 xl:px-0" id="pricing">
       <ScrollAnimation animateOnce animateIn="fade-in-bottom">
         <h3 className="text-[#1B1B1B] font-bold mb-[10px] dark:text-white/90 text-3xl lg:text-[40px]">
           Simple and transparent pricing
