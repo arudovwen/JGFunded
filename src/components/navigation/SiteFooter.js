@@ -1,9 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import axios from "axios";
 import ScrollAnimation from "react-animate-on-scroll";
-import { toDarkMode, toLightMode, toSystemMode } from "../Theme";
+import { toDarkMode, toLightMode } from "../Theme";
 
 const links = [
   {
@@ -116,27 +115,26 @@ const securities = [
 function SiteFooter() {
   const [email, setEmail] = React.useState("");
   const [isSent, setIsSent] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
   function handleSubmit(e) {
     e.preventDefault();
-
+    setLoading(true);
     const url =
       "https://script.google.com/macros/s/AKfycbzSeWwVYwcRgw8sW7kcW78arCfoH8bNGXf7ufiqbn1TvSeVdhmVyW0OnkY2LVxpV0hp/exec";
-    axios.post(url, { email }).then((res) => {
-      if (res.status === 200) {
-        console.log(res);
+
+    const formD = new FormData();
+    formD.append("Email", email);
+
+    fetch(url, { method: "POST", body: formD })
+      .then(() => {
         setIsSent(true);
         setEmail("");
+        setLoading(false);
         setTimeout(() => {
           setIsSent(false);
         }, 3000);
-      }
-    });
-    // const formD = new FormData();
-    // formD.append("email", email);
-    const form = document.forms['submit-to-google-sheet']
-    fetch(url, { method: "POST", body: new FormData(form) })
-      .then((res) => console.log("success", res))
-      .catch((error) => console.log("error", error.message));
+      })
+      .catch(() => setLoading(false));
   }
   return (
     <footer className=" pt-32 pb-20 px-6 w-full bg-white dark:bg-black relative">
@@ -178,22 +176,27 @@ function SiteFooter() {
                   <div className="flex w-full mb-1">
                     <input
                       type="email"
+                      value={email}
+                      name="Email"
                       required
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Email address"
                       className="flex-1 h-[50px] min-w-[100px] border border-[#E7E8F2] border-r-0 rounded-l-[6px] placeholder:text-dark placeholder:opacity-50 p-4 text-sm  dark:text-gray-800 outline-none placeholder:dark:text-gray-500"
                     />
                     <button
+                      disabled={loading}
                       type="submit"
-                      className="bg-primary dark:bg-black/50 p-2 rounded-r-[6px] flex items-center justify-center hover:opacity-75 w-12"
+                      className="bg-primary dark:bg-black/50 p-2 rounded-r-[6px] flex items-center justify-center hover:opacity-75 w-12 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      <Image
-                        src="/images/arrowright.svg"
-                        alt="arrow right"
-                        width={13}
-                        height={15}
-                        className="w-auto h-auto"
-                      />
+                      
+                        <Image
+                          src="/images/arrowright.svg"
+                          alt="arrow right"
+                          width={13}
+                          height={15}
+                          className="w-auto h-auto"
+                        />
+                     
                     </button>
                   </div>
                   {isSent && (

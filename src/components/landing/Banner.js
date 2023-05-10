@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import ButtonComponent from "../ButtonComponent";
 import {
   TbArrowBigRightLineFilled,
   TbArrowBigDownLineFilled,
@@ -9,8 +8,14 @@ import { RiBarChartFill } from "react-icons/ri";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Link from "next/link";
+import { openPopupWidget } from "react-calendly";
+
+import ButtonComponent from "../ButtonComponent";
 
 function Banner() {
+  const clickButton = (url, prefill, pageSettings, utm) => {
+    openPopupWidget({ url, prefill, pageSettings, utm });
+  };
   return (
     <section className="pt-20 pb-10 container grid xl:grid-cols-2 px-6 xl:px-0 gap-20">
       <div className="relative fade-in">
@@ -25,11 +30,17 @@ function Banner() {
           and funding is initiated.
         </h2>
         <div className="flex flex-col sm:flex-row gap-8 items-center">
-         <Link href="#waitlist" scroll={false} className="w-full sm:w-auto">
-         <ButtonComponent className="bg-primary text-white text-sm justify-center lg:text-base px-5 w-full sm:w-auto">
-            Join Waitlist
-          </ButtonComponent></Link>
-          <button className="text-[#686D77] dark:text-white/80 flex items-center gap-x-3 lg:gap-x-5 text-sm lg:text-base">
+          <Link href="#waitlist" scroll={false} className="w-full sm:w-auto">
+            <ButtonComponent className="bg-primary text-white text-sm justify-center lg:text-base px-5 w-full sm:w-auto">
+              Join Waitlist
+            </ButtonComponent>
+          </Link>
+          <button
+            onClick={() =>
+              clickButton("https://calendly.com/juxtgotfunded/30min")
+            }
+            className="text-[#686D77] dark:text-white/80 flex items-center gap-x-3 lg:gap-x-5 text-sm lg:text-base"
+          >
             {" "}
             <Image
               src="/images/play.svg"
