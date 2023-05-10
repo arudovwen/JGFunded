@@ -1,2 +1,2 @@
 JGFunded.com
-new
+updated
