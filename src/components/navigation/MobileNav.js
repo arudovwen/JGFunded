@@ -6,14 +6,14 @@ import Image from "next/image";
 import ButtonComponent from "../ButtonComponent";
 
 const links = [
-  {
-    title: "Products",
-    url: "",
-  },
-  {
-    title: "Use Cases",
-    url: "",
-  },
+  // {
+  //   title: "Products",
+  //   url: "",
+  // },
+  // {
+  //   title: "Use Cases",
+  //   url: "",
+  // },
   {
     title: "About us",
     url: "/about",
@@ -21,6 +21,10 @@ const links = [
   {
     title: "Careers",
     url: "",
+  },
+  {
+    title: "Pricings",
+    url: "/#pricing",
   },
   {
     title: "Contact Us",

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import axios from "axios";
 import ScrollAnimation from "react-animate-on-scroll";
 import { toDarkMode, toLightMode, toSystemMode } from "../Theme";
 
@@ -15,8 +16,8 @@ const links = [
       // },
       {
         title: "Pricing",
-        url: "#pricing",
-        target:"_self"
+        url: "/#pricing",
+        target: "_self",
       },
       // {
       //   title: "Use cases",
@@ -24,8 +25,8 @@ const links = [
       // },
       {
         title: "Careers",
-        url: "#",
-        target:"_self"
+        url: "/careers",
+        target: "_self",
       },
     ],
   },
@@ -35,12 +36,12 @@ const links = [
       {
         title: "Talk to support",
         url: "https://t.me/+1T9ga6pxTx1hYzQ0",
-        target:"_blank"
+        target: "_blank",
       },
       {
         title: "Support docs",
-        url: "#faqs",
-        target:"_self"
+        url: "/#faqs",
+        target: "_self",
       },
       // {
       //   title: "System status",
@@ -54,7 +55,7 @@ const links = [
       {
         title: "Help Centre",
         url: "https://t.me/+1T9ga6pxTx1hYzQ0",
-        target: "_blank"
+        target: "_blank",
       },
       // {
       //   title: "Account Information ",
@@ -63,12 +64,12 @@ const links = [
       {
         title: "About",
         url: "/about",
-        target: "_self"
+        target: "_self",
       },
       {
         title: "Contact Us",
         url: "/contact-us",
-        target:"_self"
+        target: "_self",
       },
     ],
   },
@@ -113,6 +114,30 @@ const securities = [
 ];
 
 function SiteFooter() {
+  const [email, setEmail] = React.useState("");
+  const [isSent, setIsSent] = React.useState(false);
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const url =
+      "https://script.google.com/macros/s/AKfycbzSeWwVYwcRgw8sW7kcW78arCfoH8bNGXf7ufiqbn1TvSeVdhmVyW0OnkY2LVxpV0hp/exec";
+    axios.post(url, { email }).then((res) => {
+      if (res.status === 200) {
+        console.log(res);
+        setIsSent(true);
+        setEmail("");
+        setTimeout(() => {
+          setIsSent(false);
+        }, 3000);
+      }
+    });
+    // const formD = new FormData();
+    // formD.append("email", email);
+    const form = document.forms['submit-to-google-sheet']
+    fetch(url, { method: "POST", body: new FormData(form) })
+      .then((res) => console.log("success", res))
+      .catch((error) => console.log("error", error.message));
+  }
   return (
     <footer className=" pt-32 pb-20 px-6 w-full bg-white dark:bg-black relative">
       <div className="container">
@@ -133,7 +158,10 @@ function SiteFooter() {
                       className="text-dark dark:text-white/80 opacity-50 font-normal text-sm lg:text-base mb-3 hover:opacity-80"
                       key={link.title}
                     >
-                      <Link href={link.url} target={link.target} scroll={false}> {link.title}</Link>
+                      <Link href={link.url} target={link.target} scroll={false}>
+                        {" "}
+                        {link.title}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -142,28 +170,39 @@ function SiteFooter() {
           </ScrollAnimation>
           <div className="bg-[#F2FCF4] dark:bg-[#313b33] mix-blend-normal text-center lg:text-left lg:w-[338px] px-6 md:px-10 py-4 md:py-8">
             <ScrollAnimation animateOnce animateIn="fade-in">
-              <form>
+              <form onSubmit={handleSubmit} name="submit-to-google-sheet">
                 <legend className="text-dark dark:text-white/90 font-bold mb-4">
                   Subscribe
                 </legend>
-                <div className="flex w-full mb-5">
-                  <input
-                    placeholder="Email address"
-                    className="flex-1 h-[50px] min-w-[100px] border border-[#E7E8F2] border-r-0 rounded-l-[6px] placeholder:text-dark placeholder:opacity-50 p-4 text-sm  dark:text-gray-800 outline-none placeholder:dark:text-gray-500"
-                  />
-                  <button
-                    type="button"
-                    className="bg-primary dark:bg-black/50 p-2 rounded-r-[6px] flex items-center justify-center hover:opacity-75 w-12"
-                  >
-                    <Image
-                      src="/images/arrowright.svg"
-                      alt="arrow right"
-                      width={13}
-                      height={15}
-                      className="w-auto h-auto"
+                <div className="mb-5">
+                  <div className="flex w-full mb-1">
+                    <input
+                      type="email"
+                      required
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Email address"
+                      className="flex-1 h-[50px] min-w-[100px] border border-[#E7E8F2] border-r-0 rounded-l-[6px] placeholder:text-dark placeholder:opacity-50 p-4 text-sm  dark:text-gray-800 outline-none placeholder:dark:text-gray-500"
                     />
-                  </button>
+                    <button
+                      type="submit"
+                      className="bg-primary dark:bg-black/50 p-2 rounded-r-[6px] flex items-center justify-center hover:opacity-75 w-12"
+                    >
+                      <Image
+                        src="/images/arrowright.svg"
+                        alt="arrow right"
+                        width={13}
+                        height={15}
+                        className="w-auto h-auto"
+                      />
+                    </button>
+                  </div>
+                  {isSent && (
+                    <p className="text-[11px] text-green-600">
+                      Email subscription successful!
+                    </p>
+                  )}
                 </div>
+
                 <p className="text-xs opacity-60  dark:text-white/80">
                   © {new Date().getFullYear()} JxtGotFunded. Copyright and
                   rights reserved.

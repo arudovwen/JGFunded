@@ -20,6 +20,7 @@ export default function Home() {
           name="description"
           content="A marketplace where vetted and verified StartUps and Investors meet, and funding is initiated."
         />
+       
       </Head>
       <WebLayout>
         <div className="min-h-screen">

@@ -9,10 +9,6 @@ import { useRouter } from "next/router";
 
 const links = [
   // {
-  //   title: "Products",
-  //   url: "",
-  // },
-  // {
   //   title: "Use Cases",
   //   url: "",
   // },
@@ -22,7 +18,11 @@ const links = [
   },
   {
     title: "Careers",
-    url: "",
+    url: "/careers",
+  },
+  {
+    title: "Pricings",
+    url: "/#pricing",
   },
   {
     title: "Contact Us",

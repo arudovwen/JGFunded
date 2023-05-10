@@ -163,10 +163,10 @@ function contactUs() {
               </h3>
               <div className="mb-4 text-center lg:text-left">
                 <a
-                  href="mailto:enquiries@jxtgotfunded.com"
+                  href="mailto:juxtgotfunded@gmail.com"
                   className="text-primary font-normal text-base sm:text-xl"
                 >
-                  enquiries@jxtgotfunded.com
+                  juxtgotfunded@gmail.com
                 </a>
               </div>
               <ul className="flex gap-x-2 sm:gap-x-4 items-center mb-6 justify-center lg:justify-start">
@@ -176,13 +176,13 @@ function contactUs() {
                     key={link.name}
                   >
                     <Link href={link.link}>
-                      <span className="w-8 h-8 rounded-full border border-[#0a142f1a] hover:border-primary/20 flex items-center justify-center hover:bg-primary/10 dark:bg-white">
+                      <span className="w-6 h-6 rounded-full border border-[#0a142f1a] hover:border-primary/20 flex items-center justify-center hover:bg-primary/10 dark:bg-white">
                         <Image
                           alt={link.name}
                           src={link.url}
                           width={link.w}
                           height={link.h}
-                          className="w-auto h-auto"
+                          className="w-6 h-auto"
                         />
                       </span>
                     </Link>
