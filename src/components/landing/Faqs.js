@@ -12,18 +12,28 @@ function Faqs() {
     },
     {
       icon: "",
-      title: "How do you get the borrower’s financial records?",
+      title: "How do you my startup get funded?",
       text: "We use Machine Learning algorithims to Analyze startups and match them to their potential investors",
     },
     {
       icon: "",
-      title: "What is your cancellation policy?",
-      text: "No more hassles in due delligence, we got you covered, a streamlined and less stressfull due delligence process.",
+      title: "How will i go about due deligence?",
+      text: "No more hassles in due deligence, we got you covered, a streamlined and less stressfull automated due deligence process.",
+    },
+     {
+      icon: "",
+      title: "Why invest in a startups?",
+      text: "Technology startups are changing nearly every aspect of life, creating explosive social and financial value. Most people have to wait for a company to go public before they can invest and be a part of a company’s growth. By the time a startup goes public or gets acquired, much of the growth has been accrued by early private investors and investment banks. Jxtgotfunded platform gives accredited investors exclusive access to participate in promising private startup funding rounds alongside top-tier VCs at the same terms, starting at $5,000.",
+    },
+    {
+      icon: "",
+      title: "What kind of updates will I receive about my portfolio companies?",
+      text: "Investors receive quarterly reports containing updates on company progress and estimated metrics. When relevant, investors also receive a monthly digest of news featuring their portfolio companies, as well as other timely updates relating to investments.",
     },
     {
       icon: "",
       title: "How does billing work?",
-      text: "",
+      text: "It works based on your subscription plan",
     },
   ];
   return (
