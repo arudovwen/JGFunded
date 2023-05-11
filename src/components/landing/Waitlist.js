@@ -36,7 +36,7 @@ function Waitlist() {
               interval={5000}
               autoPlay
             >
-              <div className="rounded-[20px] overflow-hidden bg-no-repeat bg-cover bg-[linear-gradient(189.18deg,rgba(0,0,0,0)_6.96%,#000000_99.86%),url('/images/waitlist.webp')] h-[]350px] lg:h-[550px] max-w-[505px]">
+              <div className="rounded-[20px] overflow-hidden bg-no-repeat bg-cover bg-[linear-gradient(189.18deg,rgba(0,0,0,0)_6.96%,#000000_99.86%),url('/images/waitlist.webp')] h-[350px] lg:h-[550px] max-w-[505px]">
                 <div className="w-full h-full flex flex-col items-start justify-end pb-16 px-8">
                   <Image
                     src="/images/quote-down.svg"

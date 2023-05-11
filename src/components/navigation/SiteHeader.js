@@ -43,6 +43,11 @@ function SiteHeader() {
         : setStickyClass("relative");
     }
   };
+
+  useEffect(() => {
+    setOpen(false);
+  }, [router]);
+
   // Handle nav visibility on scroll
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
