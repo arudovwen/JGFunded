@@ -216,14 +216,22 @@ function SiteFooter() {
         </div>
         <hr className="my-[52px] border-[#0a142f1a] dark:border-white/40" />
         <div className="flex flex-col md:flex-row gap-6 justify-between items-center">
-          <Image
-            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[130px] lg:w-[156px] h-auto"
-            src="/images/logo.svg"
-            alt="Fundit Logo"
-            width={156}
-            height={45}
-          />
-
+        <Image
+              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[130px] lg:w-[156px] h-auto dark:hidden"
+              src="/images/logo-dark.png"
+              alt="Fundit Logo"
+              width={156}
+              height={45}
+              priority
+            />
+            <Image
+              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[130px] lg:w-[156px] h-auto hidden dark:inline-block"
+              src="/images/logo-white.png"
+              alt="Fundit Logo"
+              width={156}
+              height={45}
+              priority
+            />
           <ul className="flex gap-x-4 lg:gap-x-10 items-center">
             {securities.map((link) => (
               <li

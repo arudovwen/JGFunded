@@ -86,8 +86,16 @@ export default function MobileNav({ open, setOpen }) {
                       <Dialog.Title className="text-base font-semibold leading-6 text-gray-900 mb-10">
                         <Link href="/">
                           <Image
-                            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[130px] lg:w-[156px]"
-                            src="/images/logo.svg"
+                            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[130px] lg:w-[156px] h-auto dark:hidden"
+                            src="/images/logo-dark.png"
+                            alt="Fundit Logo"
+                            width={156}
+                            height={45}
+                            priority
+                          />
+                          <Image
+                            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[130px] lg:w-[156px] h-auto hidden dark:inline-block"
+                            src="/images/logo-white.png"
                             alt="Fundit Logo"
                             width={156}
                             height={45}
@@ -101,20 +109,24 @@ export default function MobileNav({ open, setOpen }) {
                         {links.map((link) => (
                           <Link key={link.title} href={link.url}>
                             {" "}
-                            <li className="text-base text-dark dark:text-white/80">{link.title}</li>
+                            <li className="text-base text-dark dark:text-white/80">
+                              {link.title}
+                            </li>
                           </Link>
                         ))}
                         <hr className="my-6 border-[#0a142f1a]" />
-                       <div className="flex justify-center">
-                       <Link href={"/"}>
-                          <ButtonComponent className="bg-transparent font-medium">
-                            Login
-                          </ButtonComponent>
-                        </Link>
-                        <Link href="/">
-                          <ButtonComponent className="text-sm">Get started</ButtonComponent>
-                        </Link>
-                       </div>
+                        <div className="flex justify-center">
+                          <Link href={"/"}>
+                            <ButtonComponent className="bg-transparent font-medium">
+                              Login
+                            </ButtonComponent>
+                          </Link>
+                          <Link href="/">
+                            <ButtonComponent className="text-sm">
+                              Get started
+                            </ButtonComponent>
+                          </Link>
+                        </div>
                       </ul>
                     </div>
                   </div>

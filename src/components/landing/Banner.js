@@ -16,9 +16,10 @@ function Banner() {
   const clickButton = (url, prefill, pageSettings, utm) => {
     openPopupWidget({ url, prefill, pageSettings, utm });
   };
+  const randCount = (Math.random() * 12.3).toFixed(1);
   return (
     <section className="pt-20 pb-10 container grid xl:grid-cols-2 px-6 xl:px-0 gap-20">
-      <div className="relative fade-in">
+      <div className="relative fade-in flex flex-col justify-center">
         <h1 className="text-[#08151A] dark:text-white/90 text-5xl lg:text-[64px] font-bold lg:leading-[80px] mb-6 lg:mb-3">
           We match startups with{" "}
           <span className="text-shadow-drop-center text-primary relative img_under after:content-[url('/images/line.svg')] after:w-full after:absolute after:left-[8%] lg:after:left-[22%] after:bottom-[-25%]">

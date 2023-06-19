@@ -18,7 +18,13 @@ export default function Document() {
           name="description"
           content="A marketplace where vetted and verified StartUps and Investors meet, and funding is initiated."
         />
-        <link rel="icon" href="/icons/favicon.ico" />
+
+        <link
+          rel="shortcut icon"
+          href="/icons/favicon.ico"
+          type="image/x-icon"
+        />
+        <link rel="icon" href="/icons/favicon.ico" type="image/x-icon" />
         <link
           rel="apple-touch-icon"
           sizes="57x57"
@@ -95,6 +101,15 @@ export default function Document() {
           content="/icons//ms-icon-144x144.png"
         />
         <meta name="theme-color" content="#27AE60" />
+        <meta property="og:url" content="https://www.jxtgotfunded.com/" />
+        <meta
+          property="og:description"
+          content="A marketplace where vetted and verified StartUps and Investors meet, and funding is initiated."
+        />
+        <meta
+          property="og:image"
+          content="https://www.jxtgotfunded.com/logo-dark.png"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

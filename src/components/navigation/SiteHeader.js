@@ -61,11 +61,19 @@ function SiteHeader() {
         <div className="flex items-center gap-x-10">
           <Link href="/">
             <Image
-              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[130px] lg:w-[156px] h-auto"
-              src="/images/logo.svg"
+              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[130px] lg:w-[160px] h-auto dark:hidden"
+              src="/images/logo-dark.png"
               alt="Fundit Logo"
-              width={156}
-              height={45}
+              width={160}
+              height={50}
+              priority
+            />
+            <Image
+              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[130px] lg:w-[160px] h-auto hidden dark:inline-block"
+              src="/images/logo-white.png"
+              alt="Fundit Logo"
+              width={160}
+              height={50}
               priority
             />
           </Link>
