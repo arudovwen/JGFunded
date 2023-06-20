@@ -116,7 +116,7 @@ export default function Document() {
         />
         <meta
           property="og:image"
-          content="https://www.jxtgotfunded.com/logo-dark.png"
+          content="https://www.jxtgotfunded.com/images/jg.jpg"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
