@@ -13,17 +13,17 @@ function WeHelp() {
     {
       icon: "",
       title: "Advertising",
-      text: "We help StartUps advertise there startup to potential investors and get noticed by VCs.",
+      text: "We help StartUps advertise their startup to potential investors and get noticed by VCs.",
     },
     {
       icon: "",
       title: "Match - making",
-      text: "We use Machine Learning algorithims to Analyze startups and match them to their potential investors",
+      text: "We use Machine Learning algorithms to Analyze startups and match them to their potential investors",
     },
     {
       icon: "",
       title: "Due Diligence",
-      text: "No more hassles in due delligence, we got you covered, a streamlined and less stressfull due delligence process.",
+      text: "No more hassles in due diligence, we got you covered, a streamlined and less stressful due diligence process.",
     },
     {
       icon: "",
@@ -39,12 +39,12 @@ function WeHelp() {
           <span className="text-shadow-drop-center text-primary relative img_under after:content-[url('/images/line.svg')] after:w-full after:absolute after:left-[6%] lg:after:left-[16%] after:bottom-[-50%] lg:after:bottom-[-33%]">
             StartUps
           </span>{" "}
-          get there products seen.
+          get their products seen.
         </h2>
         <p className="text-[#333333] dark:text-white/80 text-base font-normal mb-8 sm:mb-12 mx-auto max-w-[760px] text-center">
           Are you a Startup? You don't have to wait any longer until someone is
           responding to your deal. You can now actively search your matching
-          investor and get funded from small private investors to large VC's
+          investor and get funded from small private investors to large VCs
         </p>
         <div className="grid lg:grid-cols-2 gap-16">
           <div className="banner__image h-[300px] lg:h-[500px] bg-center lg:bg-right block sm:hidden lg:block"></div>
