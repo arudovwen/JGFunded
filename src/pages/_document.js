@@ -1,6 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import { useEffect } from "react";
-import Script from "next/script";
 
 export default function Document() {
   useEffect(() => {
@@ -11,13 +10,6 @@ export default function Document() {
       textColor: "#ffffff",
       branding: true,
     });
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-7EMKTRW285");
   }, []);
   return (
     <Html lang="en">
@@ -138,10 +130,6 @@ export default function Document() {
           type="text/javascript"
           async
         ></script>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-7EMKTRW285"
-          async
-        />
       </Head>
       <body>
         <Main />
