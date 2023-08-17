@@ -109,8 +109,8 @@ function Waitlist() {
                     target="_blank"
                     href={
                       value === 1
-                        ? "https://forms.gle/s6JJhDVVJS1a8dt58"
-                        : "https://forms.gle/t42Wi1UTP7VWof3i6"
+                        ? "https://forms.gle/n6qHhGJXtWKsf9e96"
+                        : "https://forms.gle/7V43vL1MGWuuv1uX7"
                     }
                   >
                     <ButtonComponent
