@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -6,14 +6,7 @@ import Image from "next/image";
 import ButtonComponent from "../ButtonComponent";
 
 const links = [
-  // {
-  //   title: "Products",
-  //   url: "",
-  // },
-  // {
-  //   title: "Use Cases",
-  //   url: "",
-  // },
+
   {
     title: "About us",
     url: "/about",

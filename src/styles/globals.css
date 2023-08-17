@@ -1,5 +1,21 @@
 @tailwind base;
 @tailwind components;
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+.btn {
+  @apply inline-flex active:scale-95 transition-all duration-300 items-center px-8 py-3 bg-[#F2F2F2] border border-transparent font-normal text-base text-primary capitalize tracking-widest hover:opacity-90 rounded-md;
+
+}
 @tailwind utilities;
 
 :root {
@@ -309,4 +325,66 @@ html[color-theme="system"] #header__indeterminate {
   width: auto !important;
   vertical-align: top;
   border: 0;
+}
+
+.auth__carousel .carousel .control-dots {
+  text-align: left;
+}
+
+.auth__carousel .carousel .control-dots .dot {
+  width: 8px;
+  height: 4px;
+  border-radius: 16px;
+  margin: 0 4px 0 0;
+  background:#A9C2F9;
+
+}
+
+.auth__carousel .carousel .control-dots .dot.selected {
+  width: 32px;
+  height: 4px;
+  background:#fff;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:  #27ae60;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar:horizontal {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track:horizontal {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb:horizontal {
+  background:  #27ae60;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.9;
+}
+
+.sidebar{
+  border-radius: 24px;
+background: var(--linear, linear-gradient(135deg, #27AE60 0%, #11998E 100%));
 }

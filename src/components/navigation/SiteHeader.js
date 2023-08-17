@@ -61,7 +61,7 @@ function SiteHeader() {
         <div className="flex items-center gap-x-10">
           <Link href="/">
             <Image
-              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[130px] lg:w-[160px] h-auto dark:hidden"
+              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[160px] lg:w-[160px] h-auto dark:hidden"
               src="/images/logo-dark.png"
               alt="Fundit Logo"
               width={160}
@@ -69,7 +69,7 @@ function SiteHeader() {
               priority
             />
             <Image
-              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[130px] lg:w-[160px] h-auto hidden dark:inline-block"
+              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[160px] lg:w-[160px] h-auto hidden dark:inline-block"
               src="/images/logo-white.png"
               alt="Fundit Logo"
               width={160}
@@ -94,12 +94,12 @@ function SiteHeader() {
           </ul>
         </div>
         <div id="" className="hidden lg:flex items-center gap-x-8">
-          <Link href={"/"}>
+          <Link href={"/login"}>
             <ButtonComponent className="bg-transparent font-medium">
               Login
             </ButtonComponent>
           </Link>
-          <Link href="/">
+          <Link href="/onboarding/account-type">
             <ButtonComponent>Get started</ButtonComponent>
           </Link>
         </div>

@@ -1,22 +1,24 @@
 import { forwardRef } from "react";
+import clsx from "clsx";
+import { BiLoaderAlt } from "react-icons/bi";
 
 function ButtonComponent({
   type = "submit",
   className = "",
-  processing,
+  isLoading,
   children,
+  disabled,
 }) {
+  const merged = clsx("btn", className);
+
   return (
-    <button
-      type={type}
-      className={
-        `inline-flex items-center px-8 py-3 bg-[#F2F2F2] border border-transparent font-normal text-base text-primary capitalize tracking-widest active:bg-[#F2F2F2] hover:opacity-75 transition ease-in-out duration-150 rounded-md ${
-          processing && "opacity-25"
-        } ` + className
-      }
-      disabled={processing}
-    >
+    <button disabled={disabled} type={type} className={merged}>
       {children}
+      {isLoading && (
+        <span>
+          <BiLoaderAlt data-testid="loader" className="animate-spin" />
+        </span>
+      )}
     </button>
   );
 }

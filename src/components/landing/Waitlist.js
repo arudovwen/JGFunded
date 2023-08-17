@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 import ScrollAnimation from "react-animate-on-scroll";
