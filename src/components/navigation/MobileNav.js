@@ -109,12 +109,12 @@ export default function MobileNav({ open, setOpen }) {
                         ))}
                         <hr className="my-6 border-[#0a142f1a]" />
                         <div className="flex justify-center">
-                          <Link href={"/"}>
+                          <Link href={"/login"}>
                             <ButtonComponent className="bg-transparent font-medium">
                               Login
                             </ButtonComponent>
                           </Link>
-                          <Link href="/">
+                          <Link href="/onboarding/account-type">
                             <ButtonComponent className="text-sm">
                               Get started
                             </ButtonComponent>

@@ -130,7 +130,7 @@ export default function SideBar() {
         </div>
       </div>
       <div className="">
-        <div className="sidebar py-8 px-4 w-[180px] mr-auto text-sm ml-10 mr-auto">
+        <div className="sidebar py-8 px-4 w-[180px] mr-auto text-sm ml-10">
           <p className="text-white/80">
             Upgrade to PRO to get access to all features!
           </p>

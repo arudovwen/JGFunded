@@ -52,7 +52,7 @@ export default function MobileSideBar({ open, setOpen }) {
                       </button>
                     </div>
                   </Transition.Child>
-                  <div className="flex h-full flex-col overflow-y-scroll bg-white dark:bg-[#191A15] py-6 shadow-xl no-scrollbar">
+                  <div className="flex h-full flex-col overflow-y-scroll bg-[#FBFBFB] dark:bg-gray-800 py-6 shadow-xl no-scrollbar">
                     <SideBar />
                   </div>
                 </Dialog.Panel>
