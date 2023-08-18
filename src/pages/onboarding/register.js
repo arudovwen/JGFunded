@@ -86,7 +86,7 @@ function Register() {
               {content.map((item) => (
                 <ButtonComponent
                   key={item.title}
-                  className="bg-transparent border border-[#CFCFCF] text-[#0F100F] w-full text-center flex-items-center justify-center relative px-4 py-3"
+                  className="bg-transparent border border-[#CFCFCF] text-[#0F100F] dark:text-white/70 w-full text-center flex-items-center justify-center relative px-4 py-3"
                 >
                   <Image
                     className="absolute left-4"
@@ -101,9 +101,9 @@ function Register() {
             </div>
           </div>
         </div>
-        <div className="text-sm lg:text-lg text-[#686878]dark:text-white/70  pb-4 lg:pb-10">
+        <div className="text-center lg:text-left text-sm lg:text-lg text-[#686878]dark:text-white/70  pb-4 lg:pb-10">
           Already have an account?{" "}
-          <span className="text-primary font-medium">Log in</span>
+          <Link href="/login"><span className="text-primary font-medium">Log in</span></Link>
         </div>
       </div>
     </OnboardingLayout>

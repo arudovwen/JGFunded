@@ -34,7 +34,7 @@ export default function AuthLayout({ children }) {
   ];
   return (
     <section className="h-screen grid lg:grid-cols-2 overflow-hidden">
-      <div className="h-screen overflow-y-auto px-6 lg:px-[50px] pt-8 lg:pt-[50px] pb-1  lg:pb-[70px] mx-auto no-scrollbar">
+      <div className="h-screen overflow-y-auto px-6 lg:px-[50px] pt-8 lg:pt-[50px] pb-1  lg:pb-[70px] mx-auto no-scrollbar w-full lg:w-auto">
         {children}
       </div>
       <div className="h-screen bg-[url(/images/authsvg.svg)] bg-no-repeat bg-cover hidden lg:flex flex-col items-center justify-center">

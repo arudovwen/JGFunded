@@ -24,7 +24,7 @@ function AccountType() {
   ];
   return (
     <OnboardingLayout>
-      <div className="h-full flex flex-col justify-betwee">
+      <div className="h-full flex flex-col justify-between">
         <div className="mb-20">
           <div className="mb-12">
             <Link href="/">
@@ -75,7 +75,7 @@ function AccountType() {
                 </div>
                 <div className="flex-1">
                   <h2
-                    className={`text-xl font-bold mb-1 ${
+                    className={`text-base lg:text-xl font-bold mb-1 ${
                       active === item.title.toLowerCase()
                         ? "text-white"
                         : "text-[#1D1D35] dark:text-white/80"
@@ -84,7 +84,7 @@ function AccountType() {
                     {item.title}
                   </h2>
                   <p
-                    className={`text-sm max-w-[219px] ${
+                    className={`text-xs lg:text-sm max-w-[219px] ${
                       active === item.title.toLowerCase()
                         ? "text-white"
                         : "text-[#1D1D35] dark:text-white/70 "
@@ -111,7 +111,7 @@ function AccountType() {
             </ButtonComponent>
           </Link>
         </div>
-        <div className="text-sm lg:text-lg text-[#686878] dark:text-white/70  pb-4 lg:pb-10">
+        <div className="text-center lg:text-left text-sm lg:text-lg text-[#686878] dark:text-white/70  pb-4 lg:pb-10">
           Already have an account?{" "}
          <Link href="/login"> <span className="text-primary font-medium">Log in</span></Link>
         </div>
