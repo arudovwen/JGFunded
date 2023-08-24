@@ -6,13 +6,13 @@ import TopBar from "../navigation/StartUpTopBar";
 export default function DashboardLayout({ children }) {
   const router = useRouter();
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
+  // useEffect(() => {
+  //   const token = localStorage.getItem("token");
 
-    if (!token) {
-      router.push(`/login?return_to=${router.pathname}`);
-    }
-  }, []);
+  //   if (!token) {
+  //     router.push(`/login?return_to=${router.pathname}`);
+  //   }
+  // }, []);
 
   return (
     <section className="flex h-screen">
