@@ -16,39 +16,36 @@ export default function SideBar() {
   const navItems1 = [
     {
       title: "Overview",
-      url: "/investor/dashboard",
+      url: "/startup/dashboard",
     },
     {
-      title: "Matches",
-      url: "/investor/matches",
+      title: "Investor Finder",
+      url: "/startup/investor-finder",
     },
-    {
-      title: "Holdings",
-      url: "/investor/holdings",
-    },
-    {
-      title: "Activities",
-      url: "/investor/activities",
-    },
+
     {
       title: "Due deligence",
-      url: "/investor/due-deligence",
+      url: "/startup/due-deligence",
     },
     {
-      title: "Reports",
-      url: "/investor/reports",
+      title: "Fundings",
+      url: "/startup/fundings",
+    },
+    {
+      title: "Learning",
+      url: "/startup/learning",
     },
   ];
 
   const navItems2 = [
     {
       title: "How to invest",
-      url: "/investor/how-to-invest",
+      url: "/startup/how-to-invest",
       icon: "",
     },
     {
       title: "Introductions",
-      url: "/investor/introductions",
+      url: "/startup/introductions",
       icon: "",
     },
   ];
@@ -89,19 +86,19 @@ export default function SideBar() {
                   {item.title.toLowerCase() === "overview" && (
                     <ElementSvg isActive={item.url === router.pathname} />
                   )}
-                  {item.title.toLowerCase() === "activities" && (
+                  {item.title.toLowerCase() === "fundings" && (
                     <Activity isActive={item.url === router.pathname} />
                   )}
                   {item.title.toLowerCase() === "due deligence" && (
                     <Bookmark isActive={item.url === router.pathname} />
                   )}
-                  {item.title.toLowerCase() === "matches" && (
+                  {item.title.toLowerCase() === "investor finder" && (
                     <GlobalSearch isActive={item.url === router.pathname} />
                   )}
                   {item.title.toLowerCase() === "reports" && (
                     <Receipt isActive={item.url === router.pathname} />
                   )}
-                  {item.title.toLowerCase() === "holdings" && (
+                  {item.title.toLowerCase() === "learning" && (
                     <Archive isActive={item.url === router.pathname} />
                   )}
 

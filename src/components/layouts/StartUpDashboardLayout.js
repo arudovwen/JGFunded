@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
-import SideBar from "../navigation/SideBar";
-import TopBar from "../navigation/TopBar";
+import SideBar from "../navigation/StartUpSideBar";
+import TopBar from "../navigation/StartUpTopBar";
 
 export default function DashboardLayout({ children }) {
   const router = useRouter();

@@ -55,7 +55,7 @@ export default function Login() {
                <Link href="/forgot-password"> <span className="text-primary font-medium">Reset here</span></Link>
               </div>
               <div className="mt-12">
-               <Link href="/dashboard">
+               <Link href="/investor/dashboard">
                <ButtonComponent className="bg-primary text-white w-full text-center flex-items-center justify-center py-3">
                   Log in
                 </ButtonComponent></Link>

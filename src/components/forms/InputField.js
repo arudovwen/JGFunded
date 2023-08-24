@@ -1,19 +1,29 @@
 import React, { useState } from "react";
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
+import clsx from "clsx";
 
-export default function InputField({ label, name, placeholder, icon, type }) {
+export default function InputField({
+  label,
+  name,
+  placeholder,
+  icon,
+  type,
+  className = "",
+}) {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {
     setIsPasswordVisible(!isPasswordVisible);
   };
-
+  const merged = clsx("input", className);
   return (
     <div className="w-full">
-      <label className="block text-sm text-[686878] mb-2">{label}</label>
+      {label && (
+        <label className="block text-sm text-[686878] mb-2">{label}</label>
+      )}
       <div className="flex items-center relative">
         <input
-          className="border border-[#D2D2D7] rounded-[10px] p-4 w-full pr-11 outline-none focus:border-gray-400 dark:bg-gray-800 dark:text-white dark:placeholder:text-white/60"
+          className={merged}
           placeholder={placeholder}
           type={type === "password" && isPasswordVisible ? "text" : type}
         />

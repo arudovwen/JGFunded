@@ -16,6 +16,9 @@
   @apply inline-flex active:scale-95 transition-all duration-300 items-center px-8 py-3 bg-[#F2F2F2] border border-transparent font-normal text-base text-primary capitalize tracking-widest hover:opacity-90 rounded-md;
 
 }
+.input{
+  @apply border border-[#D2D2D7] rounded-[10px] p-4 w-full pr-11 outline-none focus:border-gray-400 dark:bg-gray-800 dark:text-white dark:placeholder:text-white/60
+}
 @tailwind utilities;
 
 :root {

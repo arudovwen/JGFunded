@@ -8,11 +8,12 @@ function ButtonComponent({
   isLoading,
   children,
   disabled,
+  onClick
 }) {
   const merged = clsx("btn", className);
 
   return (
-    <button disabled={disabled} type={type} className={merged}>
+    <button onClick={onClick} disabled={disabled} type={type} className={merged}>
       {children}
       {isLoading && (
         <span>
