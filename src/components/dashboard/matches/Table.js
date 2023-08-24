@@ -67,7 +67,7 @@ export default function Table() {
             ))}
           </tr>
         </thead>
-        {!bodyData.length > 0 && (
+        {bodyData.length > 0 && (
           <tbody>
             {bodyData.map((tdata, index) => (
               <tr
