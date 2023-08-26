@@ -94,14 +94,14 @@ function SiteHeader() {
           </ul>
         </div>
         <div id="" className="hidden lg:flex items-center gap-x-8">
-          <Link href={"/login"}>
+          {/* <Link href={"/login"}> */}
             <ButtonComponent className="bg-transparent font-medium">
               Login
             </ButtonComponent>
-          </Link>
-          <Link href="/onboarding/account-type">
+          {/* </Link> */}
+          {/* <Link href="/onboarding/account-type"> */}
             <ButtonComponent>Get started</ButtonComponent>
-          </Link>
+          {/* </Link> */}
         </div>
         <div className="lg:hidden">
           <Hamburger
