@@ -56,11 +56,11 @@ export default function Content() {
       </div>
       <div className="grid grid-cols-2">
         <div className="pl-[49px]">
-          <h2 className="text-[#24292E] text-xl font-medium mb-2">
+          <h2 className="text-[#24292E] dark:text-white/80 text-xl font-medium mb-2">
             Goed Finance inc.
           </h2>
-          <p className="text-sm text-[#8E8E9A] mb-4">goedfin456@gmail.com</p>
-          <p className="max-w-[344px] text-sm text-[#434357]">
+          <p className="text-sm text-[#8E8E9A] dark:text-white/60 mb-4">goedfin456@gmail.com</p>
+          <p className="max-w-[344px] text-sm text-[#434357] dark:text-white/70">
             Goed finance inc. so far for Credpal has been very great with an ROI
             of 4.5% in 3 months.
           </p>
@@ -85,7 +85,7 @@ export default function Content() {
         </div>
       </div>
       <div className="mt-20 pl-[49px] max-w-[684px]">
-        <h2 className="text-[#686878] font-medium flex items-center gap-x-2 mb-6">
+        <h2 className="text-[#686878] dark:text-white/70 font-medium flex items-center gap-x-2 mb-6">
           User responses <BsFillChatSquareDotsFill />
         </h2>
         <div className="border border-[#D7DCE0] rounded-2xl p-8">
@@ -111,12 +111,12 @@ export default function Content() {
               </div>
               <div className="flex-1 border-b border-[#D7DCE0]  group-last:border-none pb-4 mb-4 group-last:mb-0 group-last:pb-0">
                 <div className="flex justify-between items-center mb-2">
-                  <p className="font-medium text-[#24292E]">{item.title}</p>
-                  <p className="text-sm text-[#B4B4BC]">
+                  <p className="font-medium text-[#24292E] dark:text-white/70">{item.title}</p>
+                  <p className="text-sm text-[#B4B4BC] dark:text-white/60">
                     {moment(item.date).fromNow()}
                   </p>
                 </div>
-                <p className="text-sm text-[#686878]">{item.text}</p>
+                <p className="text-sm text-[#686878] dark:text-white/70">{item.text}</p>
               </div>
             </div>
           ))}

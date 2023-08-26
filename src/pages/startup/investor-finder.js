@@ -1,6 +1,6 @@
 import React from "react";
 import DashboardLayout from "@/components/layouts/StartUpDashboardLayout";
-import IndexComponent from "@/components/dashboard/activities/IndexComponent";
+import IndexComponent from "@/components/startup-dashboard/investor/IndexComponent";
 
 export default function InvestorFinder() {
   return (
