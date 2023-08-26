@@ -19,11 +19,11 @@ export default function Detail({ handleClick, detail }) {
             src={detail?.logo}
             className="rounded-full w-6 h-6"
           />
-          <span className="text-[#0D0F11] text-2xl font-bold capitalize">
+          <span className="text-[#0D0F11]  dark:text-white/80  text-2xl font-bold capitalize">
             {detail?.startup}
           </span>
         </div>
-        <div className="text-sm text-[#8E8E9A] mb-4">
+        <div className="text-sm text-[#8E8E9A] dark:text-white/70  mb-4">
           <p className="mb-2"> Hello Xfinance,</p>
           <p className="mb-2">
             {" "}
@@ -39,14 +39,14 @@ export default function Detail({ handleClick, detail }) {
         <hr className="my-7 border-[#D7DCE0]" />
       <div>
         <div className="flex justify-between items-center text-xs mb-2">
-          <span className="text-[#686878]">2 attachments</span>
+          <span className="text-[#686878]  dark:text-white/70 ">2 attachments</span>
           <button className="text-primary outline-none">Download all</button>
         </div>
         <div className="flex gap-x-3 mb-8">
           {type.map((item) => (
             <span
               key={item}
-              className="capitalize rounded text-xs bg-[#F2F2F2] px-3 py-2 flex gap-x-2 items-center"
+              className="capitalize rounded text-xs bg-[#F2F2F2] text-[#686878] px-3 py-2 flex gap-x-2 items-center"
             >
               <Image src="/images/Pdf.svg" alt="pdf" width={16} height={16} />{" "}
               {item}
@@ -55,7 +55,7 @@ export default function Detail({ handleClick, detail }) {
         </div>
 
         <div>
-          <div className="bg-[#54BD9533] rounded-[10px] p-6 text-sm text-[#434357] max-w-[300px] ml-auto relative">
+          <div className="bg-[#54BD9533] rounded-[10px] p-6 text-sm text-[#434357] dark:text-white/70  max-w-[300px] ml-auto relative">
             <p className="mb-2">Hello Credpal,</p>
             <p>The Documents you sent has been well received, thank you.</p>
             <AiFillCheckCircle className="absolute right-4 top-4 text-[#11998E]" />
@@ -68,13 +68,13 @@ export default function Detail({ handleClick, detail }) {
        
         <ButtonComponent
           onClick={() => handleClick()}
-          className="bg-transparent text-[#D2D2D7] px-4 py-2 h-auto text-xs flex gap-x-2 items-center"
+          className="bg-transparent text-[#D2D2D7] dark:text-[#686878] px-4 py-2 h-auto text-xs flex gap-x-2 items-center"
         >
          <Image src="/images/closecircle.svg" alt="pdf" width={14} height={14} />{" "}  Clear all
         </ButtonComponent>
         <ButtonComponent
           onClick={() => handleClick()}
-          className="bg-primary text-white px-4 py-2 h-auto text-xs flex gap-x-2 items-center"
+          className="bg-primary text-white  px-4 py-2 h-auto text-xs flex gap-x-2 items-center"
         >
          <Image src="/images/send2.svg" alt="pdf" width={14} height={14} />{" "}  Send
         </ButtonComponent>
