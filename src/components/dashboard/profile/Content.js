@@ -50,7 +50,7 @@ export default function Content() {
             className="text-2xl rounded-full"
           />
           <span className="absolute bottom-0 -right-1 h-8 w-8 flex items-center justify-center rounded-full bg-[#E6EAEE]">
-            <FaCamera />
+            <FaCamera className="text-[#24292E]" />
           </span>
         </div>
       </div>
@@ -105,7 +105,7 @@ export default function Content() {
                 ) : (
                   <span className="flex items-center justify-center bg-[rgba(230,234,238,1)] h-8 w-8 rounded-full">
                     {" "}
-                    <FaUser className="text-lg" />
+                    <FaUser className="text-lg text-[#24292E]" />
                   </span>
                 )}
               </div>
