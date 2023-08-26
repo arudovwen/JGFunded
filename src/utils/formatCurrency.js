@@ -1,9 +1,9 @@
-export default function formatCurrency(price) {
+export default function formatCurrency(price, dec=0) {
     let value = Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
       currencyDisplay: "narrowSymbol",
-      maximumFractionDigits: 2,
+      maximumFractionDigits: dec,
     });
     return value.format(price);
   }

@@ -16,7 +16,7 @@ export default function SideBar() {
   const navItems1 = [
     {
       title: "Overview",
-      url: "/startup/dashboard",
+      url: "/startup/overview",
     },
     {
       title: "Investor Finder",

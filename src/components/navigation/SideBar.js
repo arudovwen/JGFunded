@@ -16,7 +16,7 @@ export default function SideBar() {
   const navItems1 = [
     {
       title: "Overview",
-      url: "/investor/dashboard",
+      url: "/investor/overview",
     },
     {
       title: "Matches",

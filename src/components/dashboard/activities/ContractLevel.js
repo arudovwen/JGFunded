@@ -44,7 +44,7 @@ export default function ContractLevel() {
     }
   }
   return (
-    <div className="border border-[#F2F2F2] rounded-[6px] bg-white dark:bg-dark overflow-auto">
+    <div className="max-w-full border border-[#F2F2F2] rounded-[6px] bg-white dark:bg-dark overflow-auto">
       <table className="w-full">
         <thead>
           <tr className="border-b border-[#BAC2C9]">
