@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import EmptyComponent from "@/components/EmptyComponent";
 import formatCurrency from "@/utils/formatCurrency";
 import moment from "moment";
+import PreLoader from "@/components/Loader";
+
 export default function ContractLevel() {
   const headers = ["startup", "funding level", "invested amount", "date"];
+  const [loading, setLoading] = useState(true);
   const bodyData = [
     {
       logo: "/images/shadow.svg",
@@ -50,6 +53,12 @@ export default function ContractLevel() {
       date: new Date(),
     },
   ];
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
   return (
     <div className="border border-[#F2F2F2] rounded-[6px] bg-white dark:bg-dark overflow-auto">
       <table className="w-full">
@@ -57,7 +66,7 @@ export default function ContractLevel() {
           <tr className="border-b border-[#BAC2C9]">
             {headers.map((data) => (
               <th
-                className="text-left capitalize text-sm text-[#1D1D35] font-medium p-4"
+                className="text-left capitalize text-sm text-[#1D1D35]  dark:text-white/60 font-medium p-4 whitespace-nowrap"
                 key={data}
               >
                 {data}
@@ -65,24 +74,24 @@ export default function ContractLevel() {
             ))}
           </tr>
         </thead>
-        {bodyData.length > 0 && (
+        {!loading && bodyData.length > 0 && (
           <tbody>
             {bodyData.map((tdata, index) => (
               <tr
                 key={`index-${index}-id`}
                 className="border-b border-[#F2F2F2]"
               >
-                <td className="text-[#686878] p-4 text-sm capitalize">
+                <td className="text-[#686878]  dark:text-white/80 p-4 text-sm capitalize whitespace-nowrap">
                   {tdata.startup}
                 </td>
-                <td className="text-[#686878] p-4 text-sm capitalize">
+                <td className="text-[#686878]  dark:text-white/80 p-4 text-sm capitalize">
                   {tdata.level}
                 </td>
-                <td className="text-[#686878] p-4 text-sm capitalize">
+                <td className="text-[#686878]  dark:text-white/80 p-4 text-sm capitalize">
                   {formatCurrency(tdata.amount)}
                 </td>
 
-                <td className="text-[#686878] p-4 text-sm capitalize">
+                <td className="text-[#686878] p-4  dark:text-white/80 text-sm capitalize whitespace-nowrap">
                   {moment(tdata.date).format("ll")}
                 </td>
               </tr>
@@ -90,12 +99,13 @@ export default function ContractLevel() {
           </tbody>
         )}
       </table>
-      {!bodyData.length && (
+      {!loading && !bodyData.length && (
         <EmptyComponent
           heading="You currently have no companies invested"
           text="Your invested companies will appear here"
         />
       )}
+      {loading && <PreLoader />}
     </div>
   );
 }

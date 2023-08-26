@@ -18,26 +18,26 @@ export default function TopBar() {
     setSelectedOption(option);
   };
   return (
-    <div className="flex justify-between items-center mb-9">
-      <div className="flex gap-x-8 items-center">
+    <div className="flex flex-col lg:flex-row gap-y-3 lg:gap-y-0 justify-between items-center mb-9">
+      <div className="flex lg:gap-x-8 items-center">
         <div>
-          <span className=" text-primary text-base font-medium block">
+          <span className=" text-primary text-sm lg:text-base font-medium block">
             Wallet Balance
           </span>
-          <span className="text-[32px] text-[#24292E] dark:text-white/80 font-bold">
+          <span className="block text-2xl lg:text-[32px] text-[#24292E] dark:text-white/80 font-bold text-center lg:text-left">
             {formatCurrency(0)}
           </span>
         </div>
         <div></div>
       </div>
-      <div className="flex gap-x-4 items-center">
+      <div className="w-full lg:w-auto flex flex-col lg:flex-row gap-y-2 lg:gap-y-0 gap-x-4 items-center">
         <InputField
-          placeholder="Search by sector or location"
-          className="w-[374px] h-10 rounded px-4 py-3"
+          placeholder="Search"
+          className="w-full lg:w-[374px] h-10 rounded px-4 py-3"
         />
         <CustomSelect
           options={options}
-          className="h-10 px-4 py-3 min-w-[160px] flex items-center justify-start rounded"
+          className="h-10 px-4 py-3 min-w-[170px] w-full lg:w-auto flex items-center justify-start rounded"
         />
       </div>
     </div>

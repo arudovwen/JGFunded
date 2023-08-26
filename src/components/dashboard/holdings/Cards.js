@@ -1,11 +1,13 @@
 import ButtonComponent from "@/components/ButtonComponent";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import CenterModal from "@/components/modals/CenterModal";
+import PreLoader from "@/components/Loader";
 
 export default function Cards() {
   const [detail, setDetail] = useState(null);
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
   const bodyData = [
     {
       logo: "/images/shadow.svg",
@@ -76,18 +78,24 @@ export default function Cards() {
       address:"75b Olonode Street, Off Spencer St, Alagomeji-Yaba, Lagos."
     },
   ];
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
+
   return (
     <>
       <div>
-        <div className="flex gap-x-4 items-center mb-16">
-          <ButtonComponent className="bg-primary text-white py-3">
+        <div className="flex gap-x-4 justify-center lg:justify-start items-center mb-16">
+          <ButtonComponent className="bg-primary text-white py-3 font-normal">
             Fund wallet
           </ButtonComponent>{" "}
-          <ButtonComponent className="py-3">Withdraw</ButtonComponent>
+          <ButtonComponent className="py-3 font-normal">Withdraw</ButtonComponent>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-5">
-          {bodyData.map((item, index) => (
+          {!loading && bodyData.map((item, index) => (
             <div
               onClick={() => {
                 setDetail(item);
@@ -99,6 +107,7 @@ export default function Cards() {
             </div>
           ))}
         </div>
+        {loading && <PreLoader />}
       </div>
       <CenterModal open={open} setOpen={setOpen}>
         <Card detail={detail} isFull />

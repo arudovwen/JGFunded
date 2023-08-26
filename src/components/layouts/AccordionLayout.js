@@ -32,7 +32,7 @@ const AccordionLayout = ({
       </div>
 
       {activeIndex === index && (
-        <div className="text-left text-base text-[#667085]">{children}</div>
+        <div className="transition ease-in-out duration-500 text-left text-base text-[#667085]">{children}</div>
       )}
     </div>
   );

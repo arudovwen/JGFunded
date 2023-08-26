@@ -13,13 +13,13 @@ export default function Card({ detail, isFull = false }) {
     }
   }
   return (
-    <div className="transition-all duration-500 hover:shadow-lg cursor-pointer bg-white dark:bg-gray-700 p-4 rounded-2xl border border-[#D7DCE0]">
+    <div className="transition-all duration-500 hover:shadow-lg cursor-pointer bg-white dark:bg-gray-800 p-4 rounded-2xl border border-[#D7DCE0]">
       <div className="flex justify-between items-start">
         <div>
-          <p className="text-[#24292E]  dark:text-white/80 text-lg font-bold capitalize">
+          <p className="text-[#24292E]  dark:text-white/80 text-lg font-bold capitalize mb-1">
             {detail?.startup}
           </p>
-          <p className="text-sm text-[#677684] dark:text-white/70 mb-4 flex items-center gap-x-1 capitalize">
+          <p className="text-sm text-[#677684] dark:text-white/80 mb-4 flex items-center gap-x-1 capitalize">
             <span>{detail?.sector}</span>, <span>{detail?.location}</span>
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function Card({ detail, isFull = false }) {
 
       <div className="flex justify-between gap-x-2 max-w-[400px]">
         <div>
-          <span className="block text-sm text-[#24292E] dark:text-white/70">
+          <span className="block text-sm text-[#24292E] dark:text-white/60">
             ROI
           </span>
           <span className="text-[#3A434B] dark:text-white/60 font-bold">
@@ -45,7 +45,7 @@ export default function Card({ detail, isFull = false }) {
           </span>
         </div>
         <div>
-          <span className="text-sm block text-[#24292E] dark:text-white/70">
+          <span className="text-sm block text-[#24292E] dark:text-white/60">
             Start date
           </span>
           <span className="text-[#3A434B] dark:text-white/60 font-bold">
@@ -53,7 +53,7 @@ export default function Card({ detail, isFull = false }) {
           </span>
         </div>
         <div>
-          <span className="text-sm block text-[#24292E] dark:text-white/70">
+          <span className="text-sm block text-[#24292E] dark:text-white/60">
             Tenor
           </span>
           <span className="text-[#3A434B] dark:text-white/60 font-bold">
@@ -66,16 +66,16 @@ export default function Card({ detail, isFull = false }) {
         <div>
           <hr className="my-4" />
           <div className="mb-6">
-            <p className="text-[#24292E]  dark:text-white/80 text-2xl font-bold capitalize">
+            <p className="text-[#24292E]  dark:text-white/80 text-2xl font-bold capitalize mb-2">
               {detail?.startup}
             </p>
-            <p className="text-sm text-[#677684] dark:text-white/70 mb-4 flex items-center gap-x-1 capitalize">
+            <p className="text-sm text-[#677684] dark:text-white/80 mb-4 flex items-center gap-x-1 capitalize">
               <span>{detail?.description}</span>
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-6">
         <div>
-          <span className="block text-sm text-[#24292E] dark:text-white/70 whitespace-nowrap">
+          <span className="block text-sm text-[#24292E] dark:text-white/60 whitespace-nowrap">
             Contact Number
           </span>
           <span className="text-[#3A434B] dark:text-white/60 font-bold whitespace-nowrap">
@@ -83,7 +83,7 @@ export default function Card({ detail, isFull = false }) {
           </span>
         </div>
         <div>
-          <span className="text-sm block text-[#24292E] dark:text-white/70 whitespace-nowrap">
+          <span className="text-sm block text-[#24292E] dark:text-white/60 whitespace-nowrap">
            Contact Email
           </span>
           <span className="text-[#3A434B] dark:text-white/60 font-bold">
@@ -91,7 +91,7 @@ export default function Card({ detail, isFull = false }) {
           </span>
         </div>
         <div>
-          <span className="text-sm block text-[#24292E] dark:text-white/70 whitespace-nowrap">
+          <span className="text-sm block text-[#24292E] dark:text-white/60 whitespace-nowrap">
             Head Office
           </span>
           <span className="text-[#3A434B] dark:text-white/60 font-bold">

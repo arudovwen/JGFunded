@@ -17,9 +17,9 @@ export default function InputField({
   };
   const merged = clsx("input", className);
   return (
-    <div className="w-full">
+    <div className="w-full max-w-[374px]">
       {label && (
-        <label className="block text-sm text-[686878] mb-2">{label}</label>
+        <label className="block text-sm text-[#686878] mb-2">{label}</label>
       )}
       <div className="flex items-center relative">
         <input

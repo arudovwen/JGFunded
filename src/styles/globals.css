@@ -13,7 +13,7 @@
 }
 
 .btn {
-  @apply inline-flex active:scale-95 transition-all duration-300 items-center px-8 py-3 bg-[#F2F2F2] border border-transparent font-normal text-base text-primary capitalize tracking-widest hover:opacity-90 rounded-md;
+  @apply inline-flex active:scale-95 transition-all duration-300 items-center px-8 py-3 bg-[#F2F2F2] border border-transparent font-normal text-base text-primary capitalize tracking-widest hover:opacity-90 rounded-lg;
 
 }
 .input{

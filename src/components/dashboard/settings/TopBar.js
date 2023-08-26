@@ -18,27 +18,19 @@ export default function TopBar() {
     setSelectedOption(option);
   };
   return (
-    <div className="flex justify-between items-center mb-9">
-      <div className="flex gap-x-8 items-center">
+    <div className="flex flex-col lg:flex-row gap-y-3 lg:gap-y-0 justify-between items-center mb-9">
+      <div className="flex lg:gap-x-8 items-center">
         <div>
-          <span className=" text-[#3A434B] text-[32px] font-medium block">
-            Settings
-          </span>
-          <span className=" text-sm text-[#677684] dark:text-white/80 font-bold">
-            Manage your account settings and preferences.
-          </span>
+        
         </div>
         <div></div>
       </div>
       <div className="flex gap-x-4 items-center">
         <InputField
-          placeholder="Search by sector or location"
+          placeholder="Search"
           className="w-[374px] h-10 rounded px-4 py-3"
         />
-        <CustomSelect
-          options={options}
-          className="h-10 px-4 py-3 min-w-[160px] flex items-center justify-start rounded"
-        />
+      
       </div>
     </div>
   );

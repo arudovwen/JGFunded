@@ -12,7 +12,7 @@ export default function IndexComponent() {
   return (
     <div>
       <TopBar />
-      <div className="flex gap-x-20">
+      <div className="flex flex-col md:flex-row gap-y-10 md:gap-y-0 gap-x-20">
         <Navigation active={active} setActive={setActive} />
 
         <div className="flex-1">

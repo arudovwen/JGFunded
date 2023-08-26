@@ -22,7 +22,7 @@ export default function RangeComponent({ value }) {
           style={{ width: `${value}%`, background: `${handleColor(value)}` }}
         ></div>
       </div>
-      <span className="text-sm text-[#8E8E9A] font-medium">{value}%</span>
+      <span className="text-sm text-[#8E8E9A] dark:text-white/80 font-medium">{value}%</span>
     </div>
   );
 }

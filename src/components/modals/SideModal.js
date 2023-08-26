@@ -35,11 +35,11 @@ export default function SideModal({ open, setOpen, children }) {
                     <div className="border-b border-[#D7DCE0]">
                       <button
                         type="button"
-                        className=" mb-4 pr-4 ml-auto block rounded-md text-[#3A434B] hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-white"
+                        className=" mb-4 mr-4 ml-auto block rounded-md text-[#3A434B] hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-white"
                         onClick={() => setOpen(false)}
                       >
                         <span className="sr-only">Close panel</span>
-                        <XMarkIcon className="h-4 w-4" aria-hidden="true" />
+                        <XMarkIcon className="h-4 w-4 dark:text-white/80 " aria-hidden="true" />
                       </button>
                     </div>
                     <div className="relative mt-6 flex-1 px-4 sm:px-6">

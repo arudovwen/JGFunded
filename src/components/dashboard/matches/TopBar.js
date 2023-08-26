@@ -17,10 +17,10 @@ export default function TopBar() {
     setSelectedOption(option);
   };
   return (
-    <div className="flex justify-between items-center mb-9">
-      <div className="flex gap-x-8 items-center">
+    <div className="flex flex-col lg:flex-row gap-y-3 lg:gap-y-0 justify-between items-center mb-9">
+      <div className="flex lg:gap-x-8 items-center dark:text-white/70 ">
         <div>
-          <span className=" mb-1 text-[#3A434B] text-sm font-bold flex items-center gap-x-2">
+          <span className=" mb-1 text-[#3A434B] dark:text-white/70 text-sm font-bold flex items-center gap-x-2">
             <span>Overview</span> <BsInfoCircle className="text-xs" />
           </span>
           <div className="flex gap-x-1 items-center">
@@ -30,21 +30,21 @@ export default function TopBar() {
             <span className="h-4 w-8 rounded-[2px] bg-[#22B9C3]" />
           </div>
         </div>
-        <div>
-          <div className="text-[#3A434B] text-base font-bold">65%</div>
-          <div className="text-[#3A434B] text-xs font-normal">
+        <div >
+          <div className="text-[#3A434B] dark:text-white/70  text-base font-bold">65%</div>
+          <div className="text-[#3A434B] dark:text-white/70  text-xs font-normal">
             Matching Average
           </div>
         </div>
       </div>
-      <div className="flex gap-x-4 items-center">
+      <div className="w-full lg:w-auto flex flex-col lg:flex-row gap-y-2 lg:gap-y-0 gap-x-4 items-center">
         <InputField
           placeholder="Search by sector or location"
-          className="w-[374px] h-10 rounded px-4 py-3"
+          className="w-full lg:w-[374px] h-10 rounded px-4 py-3"
         />
         <CustomSelect
           options={options}
-          className="h-10 px-4 py-3 min-w-[160px] flex items-center justify-start rounded"
+          className="h-10 px-4 py-3 min-w-[170px] w-full lg:w-auto flex items-center justify-start rounded"
         />
       </div>
     </div>

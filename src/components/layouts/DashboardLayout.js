@@ -21,7 +21,7 @@ export default function DashboardLayout({ children }) {
       </aside>
       <main className="flex-1 h-full overflow-y-auto flex flex-col">
         <TopBar />
-       <div className="flex-1 py-5 px-[18px]">
+       <div className="flex-1 pt-5 pb-10 px-[18px]">
        {children}</div></main>
     </section>
   );

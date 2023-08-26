@@ -1,8 +1,5 @@
 import InputField from "@/components/forms/InputField";
-import CustomSelect from "@/components/forms/Select";
-import formatCurrency from "@/utils/formatCurrency";
 import React, { useState } from "react";
-import { BsInfoCircle } from "react-icons/bs";
 
 export default function TopBar() {
   const options = [
@@ -19,17 +16,11 @@ export default function TopBar() {
   };
   return (
     <div className="flex flex-col lg:flex-row gap-y-3 lg:gap-y-0 justify-between items-center mb-9">
-      <div className="flex lg:gap-x-8 items-center">
-        <div></div>
-      </div>
-      <div className="w-full lg:w-auto flex flex-col lg:flex-row gap-y-2 lg:gap-y-0 gap-x-4 items-center">
+      <div className="flex gap-x-8 items-center"></div>
+      <div className="flex gap-x-4 items-center">
         <InputField
           placeholder="Search by sector or location"
-          className="w-full lg:w-[374px] h-10 rounded px-4 py-3"
-        />
-        <CustomSelect
-          options={options}
-          className="h-10 px-4 py-3 min-w-[170px] w-full lg:w-auto flex items-center justify-start rounded"
+          className="w-[374px] h-10 rounded px-4 py-3"
         />
       </div>
     </div>
