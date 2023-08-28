@@ -55,7 +55,7 @@ export default function SideBar() {
   return (
     <div className="bg-[#FBFBFB] dark:bg-gray-800 relative flex flex-col gap-y-10 justify-between h-full pb-4">
       <div>
-        <div className="mb-12 py-4 px-10">
+        <div className="mb-10 py-4 px-10">
           <Image
             className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-[160px] lg:w-[160px] h-auto dark:hidden"
             src="/images/logo-dark.png"

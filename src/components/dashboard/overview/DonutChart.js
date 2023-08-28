@@ -1,5 +1,8 @@
 import formatCurrency from "@/utils/formatCurrency";
 import React from "react";
+import dynamic from "next/dynamic";
+
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 export default function DonutChart() {
   const content = [
@@ -15,7 +18,7 @@ export default function DonutChart() {
     },
     {
       name: "Sponsored",
-      value: 39,
+      value: 390,
       bg: "#C6C7F8",
     },
     {
@@ -24,10 +27,46 @@ export default function DonutChart() {
       bg: "#95A4FC",
     },
   ];
+  const series = [4956, 895, 390, 469];
+  const options = {
+    legend: {
+      show: false,
+    },
+    colors: ["#BAEDBD", "#000", "#C6C7F8", "#95A4FC"],
+    chart: {
+      type: "donut",
+      id: "investment",
+      // toolbar: false,
+    },
+    labels: ["Direct", "Affiliate", "Sponsored", "E-mail"],
+    dataLabels: {
+      enabled: true,
+      dropShadow:{
+        enabled:true,
+        top: 1,
+        left: 1,
+        blur: 1,
+        color: '#000',
+        opacity: 0.45
+      },
+    },
+    donut: {
+      background: "green",
+    },
+   
+
+
+  };
   return (
     <div>
-      <h2 className="font-semibold text-sm text-[#1C1C1C] dark:text-white/90">Total Investment</h2>{" "}
-      <div className="mb-5 h-[110px]"></div>
+      <h2 className="font-semibold text-sm text-[#1C1C1C] dark:text-white/90">
+        Total Investment
+      </h2>{" "}
+      <div className="mb-5 min-h-[110px]">
+        {typeof window !== "undefined" && (
+          <Chart options={options} series={series} type="donut" />
+        )}
+      </div>
       <div className="grid gap-y-4">
         {content.map((item) => (
           <div key={item.name}>

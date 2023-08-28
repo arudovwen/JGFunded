@@ -1,4 +1,12 @@
 import React from "react";
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  Marker,
+} from "react-simple-maps";
+
+import features from "@/utils/features.json";
 
 export default function LocationChart() {
   const content = [
@@ -18,7 +26,7 @@ export default function LocationChart() {
       count: "3.2m",
     },
     {
-      name: "Mali",
+      name: "South Africa",
       value: 69,
       count: "3.2m",
     },
@@ -28,8 +36,35 @@ export default function LocationChart() {
       <h2 className="font-semibold text-sm text-[#1C1C1C] dark:text-white/90">
         Investment by Location
       </h2>{" "}
-      <div className="mb-4 h-20"></div>
-      <div className="grid gap-y-6">
+      <div className="mb-7 min-h-20 relative">
+        <ComposableMap>
+          <Geographies geography={features}>
+            {({ geographies }) =>
+              geographies.map((geo) => (
+                <Geography
+                  key={geo.rsmKey}
+                  geography={geo}
+                  fill="#A8C5DA80"
+                  stroke="#fff"
+                />
+              ))
+            }
+          </Geographies>
+          <Marker coordinates={[8.6753, 9.082]}>
+            <circle r={8} fill="#1C1C1C" />
+          </Marker>
+          <Marker coordinates={[36.8219, -1.2921]}>
+            <circle r={8} fill="#1C1C1C" />
+          </Marker>
+          <Marker coordinates={[-1.0232, 7.9465]}>
+            <circle r={8} fill="#1C1C1C" />
+          </Marker>
+          <Marker coordinates={[22.9375, -30.5595]}>
+            <circle r={8} fill="#1C1C1C" />
+          </Marker>
+        </ComposableMap>
+      </div>
+      <div className="grid gap-y-5">
         {content.map((item) => (
           <div key={item.name}>
             <div className="flex justify-between gap-x-2 items-center mb-1">

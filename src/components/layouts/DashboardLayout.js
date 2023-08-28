@@ -15,7 +15,7 @@ export default function DashboardLayout({ children }) {
   // }, []);
 
   return (
-    <section className="flex h-screen">
+    <section className="flex h-screen container">
       <aside className="h-screen hidden lg:flex flex-col lg:w-[245px] border-r-2 border-[#F2F2F]">
         <SideBar />
       </aside>

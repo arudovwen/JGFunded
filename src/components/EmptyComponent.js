@@ -3,7 +3,7 @@ import React from "react";
 
 export default function EmptyComponent({ heading, text }) {
   return (
-    <div className="p-6 flex flex-col justify-center mt-36 mb-20 text-center">
+    <div className="p-6 flex flex-col justify-center mt-20 mb-20 text-center">
       <Image
         width={160}
         height={160}
