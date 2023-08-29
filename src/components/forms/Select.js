@@ -3,7 +3,11 @@ import { Listbox, Transition } from "@headlessui/react";
 import { FaChevronDown } from "react-icons/fa";
 import clsx from "clsx";
 
-export default function CustomSelect({ className = "", options }) {
+export default function CustomSelect({
+  className = "",
+  options,
+  placeholder = "Filter",
+}) {
   const [selected, setSelected] = useState(options[0]);
   const merged = clsx("input", className);
   return (
@@ -11,7 +15,7 @@ export default function CustomSelect({ className = "", options }) {
       <div className="relative">
         <Listbox.Button className={merged}>
           <span className="block truncate text-sm text-left">
-            {selected.name || "Filter"}
+            {selected.name || <span className="opacity-60">{placeholder}</span>}
           </span>
           <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
             <FaChevronDown

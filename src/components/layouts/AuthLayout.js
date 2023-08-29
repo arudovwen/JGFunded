@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 export default function AuthLayout({ children }) {
   const router = useRouter();
   return (
-    <section className="h-screen container">
+    <section className="h-screen 2xl:container">
       <div className="pl-4 pr-6 lg:pl-[70px] lg:pr-[70px] py-[20px] flex justify-between items-center gap-x-2">
         <Link href="/">
           <Image

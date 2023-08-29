@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { BsLinkedin } from "react-icons/bs";
 
 export default function TeamMembers() {
   const content = [
@@ -9,15 +10,15 @@ export default function TeamMembers() {
       title: "Founder",
     },
     {
-        img: "/images/name.svg",
-        name: "Nmandi Samul",
-        title: "Founder",
-      },
-      {
-        img: "/images/name.svg",
-        name: "Nmand Samuel",
-        title: "Founder",
-      },
+      img: "/images/name.svg",
+      name: "Nmandi Samul",
+      title: "Founder",
+    },
+    {
+      img: "/images/name.svg",
+      name: "Nmand Samuel",
+      title: "Founder",
+    },
   ];
   return (
     <div className="pb-10">
@@ -29,12 +30,12 @@ export default function TeamMembers() {
       </h2>
       <div className="grid md:grid-cols-2 xl:grid-cols-3 lg:gap-x-6 gap-y-10">
         {content.map((item) => (
-          <div key={item.name} className="flex gap-x-4">
+          <div key={item.name} className="flex gap-x-3">
             <Image
               width={107}
               height={107}
               src={item.img}
-              className="rounded-full border  border-primary"
+              className="rounded-full border  border-primary w-[107px] h-[107px]"
               alt="team"
             />
             <div className="flex-1">
@@ -49,18 +50,22 @@ export default function TeamMembers() {
                 <span className="text-primary font-bold">Unlock</span>
               </span>
               <span className="flex gap-x-3 items-center">
-                <Image
-                  width={20}
-                  height={20}
-                  alt="social"
-                  src="/images/linkedin.svg"
-                />
-                <Image
-                  width={20}
-                  height={20}
-                  alt="social"
-                  src="/images/instagram.svg"
-                />
+                <span className="bg-[#F2F2F299] h-8 w-8 rounded-full flex items-center justify-center">
+                  <Image
+                    width={20}
+                    height={20}
+                    alt="social"
+                    src="/images/linkedin.svg"
+                  />
+                </span>
+                <span className="bg-[#F2F2F299] h-8 w-8 rounded-full flex items-center justify-center">
+                  <Image
+                    width={20}
+                    height={20}
+                    alt="social"
+                    src="/images/instagram.svg"
+                  />
+                </span>
               </span>
             </div>
           </div>

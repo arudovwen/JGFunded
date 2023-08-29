@@ -125,7 +125,7 @@ export default function Table() {
           )}
           {loading && <PreLoader />}
         </div>
-        <div className="border border-[#F2F2F2] w-[200px] rounded-2xl bg-white dark:bg-dark p-4"></div>
+       
       </div>
     </div>
   );

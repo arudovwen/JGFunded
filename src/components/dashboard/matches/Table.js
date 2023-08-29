@@ -100,7 +100,7 @@ export default function Table() {
                       setDetail(tdata);
                       setOpen(true);
                     }}
-                    className="text-[#27AE60] underline outline-none"
+                    className="text-[#27AE60] hover:underline outline-none"
                   >
                     View details
                   </button>

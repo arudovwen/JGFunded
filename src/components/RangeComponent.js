@@ -16,9 +16,9 @@ export default function RangeComponent({ value }) {
   }
   return (
     <div className="flex gap-x-2 items-center">
-      <div className="bg-[#D7DCE0] w-full max-w-[190px] rounded h-2">
+      <div className="bg-[#D7DCE0] w-full max-w-[190px] rounded-[2px] h-2">
         <div
-          className="rounded h-2"
+          className="rounded-[2px] h-2"
           style={{ width: `${value}%`, background: `${handleColor(value)}` }}
         ></div>
       </div>
