@@ -1,4 +1,5 @@
-import "@/styles/globals.css";
+import "react-datepicker/dist/react-datepicker.css";
+import "@/styles/globals.scss";
 import { DM_Sans } from "next/font/google";
 import { updateTheme } from "../components/Theme";
 import Script from "next/script";

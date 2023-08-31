@@ -30,7 +30,7 @@ export default function SideModal({ open, setOpen, children }) {
                 leaveFrom="translate-x-0"
                 leaveTo="translate-x-full"
               >
-                <Dialog.Panel className="pointer-events-auto relative w-screen max-w-[400px]">
+                <Dialog.Panel className="pointer-events-auto relative w-screen max-w-[480px]">
                   <div className="flex h-full flex-col overflow-y-scroll bg-white dark:bg-[#191A15] py-6 shadow-xl">
                     <div className="border-b border-[#D7DCE0]">
                       <button

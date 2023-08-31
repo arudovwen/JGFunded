@@ -27,7 +27,7 @@ export default function TopBar() {
       </div>
       <div className="w-full lg:w-auto flex flex-col lg:flex-row gap-y-2 lg:gap-y-0 gap-x-4 items-center">
         <InputField
-          placeholder="Search by sector or location"
+          placeholder="Search"
           className="w-full lg:w-[374px] h-10 rounded px-4 py-3"
         />
         <CustomSelect

@@ -6,7 +6,7 @@ import Hamburger from "hamburger-react";
 import MobileSideBar from "./StartUpMobileSideBar";
 export default function TopBar() {
   const router = useRouter();
-  const name = router.pathname.split("/")[2];
+  const name = router.pathname.split("/")[2].replace("-", " ");
   const [isOpen, setOpen] = useState(false);
   return (
     <>

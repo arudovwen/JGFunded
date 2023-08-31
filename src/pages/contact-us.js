@@ -176,13 +176,13 @@ function contactUs() {
                     key={link.name}
                   >
                     <Link href={link.link}>
-                      <span className="w-6 h-6 rounded-full border border-[#0a142f1a] hover:border-primary/20 flex items-center justify-center hover:bg-primary/10 dark:bg-white">
+                      <span className="w-7 h-7 rounded-full border border-[#0a142f1a] hover:border-primary/20 flex items-center justify-center hover:bg-primary/10 dark:bg-white">
                         <Image
                           alt={link.name}
                           src={link.url}
                           width={link.w}
                           height={link.h}
-                          className="w-6 h-auto"
+                          className="w-4 h-auto"
                         />
                       </span>
                     </Link>

@@ -6,7 +6,7 @@ import moment from "moment";
 import PreLoader from "@/components/Loader";
 
 export default function Table() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const [detail, setDetail] = useState(null);
   const headers = ["startup", "latest information", "date", "actions"];
   const [loading, setLoading] = useState(true);
@@ -59,7 +59,7 @@ export default function Table() {
   }, []);
 
   return (
-    <div className="max-w-full border border-[#F2F2F2] rounded-[6px] bg-white dark:bg-dark overflow-auto">
+    <div className="border border-[#F2F2F2] rounded-[6px] bg-white dark:bg-dark overflow-auto">
       <table className="w-full">
         <thead>
           <tr className="border-b border-[#BAC2C9]">

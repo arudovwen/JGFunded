@@ -51,7 +51,7 @@ export default function Content() {
   return (
     <div>
       <div className="bg-[#1D1D35] rounded-[20px] py-6 lg:py-[36px] px-6 lg:px-[60px] mb-[52px] h-full">
-        <div className="flex flex-col lg:flex-row items-center gap-y-6 lg:gap-y-0 gap-x-12 mb-[60px]">
+        <div className="flex flex-col lg:flex-row items-start gap-y-6 lg:gap-y-0 gap-x-12 mb-[60px]">
           <Image
             width={100}
             height={100}

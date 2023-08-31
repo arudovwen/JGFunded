@@ -95,22 +95,14 @@ function Waitlist() {
                     <option value={2}>Investor</option>
                   </select>
                 </div>
-                {/* <div className="mb-10">
-                  <label className="text-[#686878] text-sm mb-2 block">
-                    Message
-                  </label>
-                  <textarea
-                    className="w-full bg-white px-4 py-4 rounded-lg"
-                    rows="4"
-                  ></textarea>
-                </div> */}
+               
                 <div>
                   <a
-                    target="_blank"
+                   
                     href={
                       value === 1
-                        ? "https://forms.gle/n6qHhGJXtWKsf9e96"
-                        : "https://forms.gle/7V43vL1MGWuuv1uX7"
+                        ? "/form/startup"
+                        : "/form/investor"
                     }
                   >
                     <ButtonComponent

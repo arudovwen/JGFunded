@@ -5,7 +5,7 @@ import ButtonComponent from "../ButtonComponent";
 
 import Link from "next/link";
 import MobileNav from "./MobileNav";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const links = [
   // {

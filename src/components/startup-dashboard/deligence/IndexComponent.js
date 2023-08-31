@@ -1,5 +1,5 @@
 import TopBar from "./TopBar";
-import Table from "./Table";
+import Cards from "./Cards";
 import React, { useState } from "react";
 
 export default function IndexComponent() {
@@ -7,7 +7,7 @@ export default function IndexComponent() {
   return (
     <div>
       <TopBar />
-      <Table />
+      <Cards />
     </div>
   );
 }
