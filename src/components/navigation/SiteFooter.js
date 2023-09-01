@@ -137,7 +137,7 @@ function SiteFooter() {
       .catch(() => setLoading(false));
   }
   return (
-    <footer className=" pt-32 pb-20 px-6 w-full bg-white dark:bg-black relative">
+    <footer className=" pt-32 pb-20 px-6 w-full bg-white dark:bg-black relativ">
       <div className="container">
         <div className="flex w-full flex-col md:flex-row gap-6">
           <ScrollAnimation
