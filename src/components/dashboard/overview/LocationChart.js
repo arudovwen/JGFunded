@@ -36,7 +36,7 @@ export default function LocationChart() {
       <h2 className="font-semibold text-sm text-[#1C1C1C] dark:text-white/90">
         Investment by Location
       </h2>{" "}
-      <div className="mb-7 min-h-20 relative">
+      <div className="min-h-20 relative">
         <ComposableMap>
           <Geographies geography={features}>
             {({ geographies }) =>
@@ -64,10 +64,10 @@ export default function LocationChart() {
           </Marker>
         </ComposableMap>
       </div>
-      <div className="grid gap-y-5">
+      <div className="grid gap-y-4">
         {content.map((item) => (
           <div key={item.name}>
-            <div className="flex justify-between gap-x-2 items-center mb-1">
+            <div className="flex justify-between gap-x-2 items-center ">
               <span className="text-xs text-[#1C1C1C] dark:text-white/80 font-medium">
                 {item.name}
               </span>
