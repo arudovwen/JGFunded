@@ -36,7 +36,7 @@ export default function LocationChart() {
       <h2 className="font-semibold text-sm text-[#1C1C1C] dark:text-white/90">
         Investment by Location
       </h2>{" "}
-      <div className="min-h-20 relative">
+      <div className="mb-3 min-h-20 relative">
         <ComposableMap>
           <Geographies geography={features}>
             {({ geographies }) =>
