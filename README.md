@@ -1,2 +1,3 @@
 JGFunded.com
-updated Friday
+updated Friday....
+
