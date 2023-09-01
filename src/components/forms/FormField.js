@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
 import clsx from "clsx";
 
-export default function InputField({
+export default function FormField({
   label,
   name,
   placeholder,
   icon,
   type,
   className = "",
-
+  register,
+  errors,
   isCheckbox = false, // Add this prop to indicate if it's a checkbox
   isRadio = false,
-  maxW = "max-w-[374px]",
+  maxW="max-w-[374px]"
 }) {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
@@ -24,7 +25,7 @@ export default function InputField({
 
   return (
     <div className={`w-full ${maxW}`}>
-      {label && !isCheckbox && !isRadio && (
+      {(label && !isCheckbox && !isRadio) && (
         <label className="block text-sm text-[#686878] mb-2">{label}</label>
       )}
       <div className="flex items-center relative">
@@ -32,20 +33,32 @@ export default function InputField({
           <div>
             <label className="text-sm text-[#686878] flex gap-x-2 items-center whitespace-nowrap">
               {" "}
-              <input className={merged} type="checkbox" value={name} /> {label}
+              <input
+                className={merged}
+                type="checkbox"
+                value={name}
+                {...register(name)}
+              />{" "}
+              {label}
             </label>
           </div>
         ) : isRadio ? (
           <div>
             <label className="text-sm text-[#686878] flex gap-x-2 items-center whitespace-nowrap">
               {" "}
-              <input className={merged} type="checkbox" /> {label}
+              <input
+                className={merged}
+                type="checkbox"
+                {...register(name)}
+              />{" "}
+              {label}
             </label>
           </div>
         ) : (
           <input
             className={merged}
             placeholder={placeholder}
+            {...register(name)}
             type={type === "password" && isPasswordVisible ? "text" : type}
           />
         )}
@@ -65,7 +78,9 @@ export default function InputField({
           </span>
         )}
       </div>
-   
+      {errors[name] && (
+        <span className="text-sm text-red-500">{errors[name].message}</span>
+      )}
     </div>
   );
 }

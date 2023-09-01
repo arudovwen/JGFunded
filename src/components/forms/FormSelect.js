@@ -7,13 +7,25 @@ export default function CustomSelect({
   className = "",
   options,
   placeholder = "Filter",
+  errors,
+  register,
+  setValue,
   name,
   label,
 }) {
   const [selected, setSelected] = useState(options[0]);
   const merged = clsx("input", className);
 
-  useEffect(() => {}, [selected]);
+  useEffect(() => {
+    if (selected) {
+      setValue(name, selected.value);
+      register(name);
+    }
+
+    return () => {
+      setValue(name, "");
+    };
+  }, [selected]);
 
   return (
     <div>
@@ -69,6 +81,9 @@ export default function CustomSelect({
           </Transition>
         </div>
       </Listbox>
+      {errors[name] && (
+        <span className="text-sm text-red-500">{errors[name].message}</span>
+      )}
     </div>
   );
 }

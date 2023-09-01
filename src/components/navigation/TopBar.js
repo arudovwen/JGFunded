@@ -11,10 +11,10 @@ export default function TopBar() {
   const [isOpen, setOpen] = useState(false);
 
   function handleText(value) {
-    if (value.toLowerCase() === "settings") {
+    if (value?.toLowerCase() === "settings") {
       return "Manage your account settings and preferences.";
     }
-    if (value.toLowerCase() === "profile") {
+    if (value?.toLowerCase() === "profile") {
       return "Welcome to your profile page";
     }
     return "";
@@ -24,10 +24,10 @@ export default function TopBar() {
       <nav className="flex items-center justify-between pt-4 md:pt-5 pb-5 px-[18px]">
         <div>
           <h1 className="capitalize text-base lg:text-xl font-bold text-[#3A434B] dark:text-white/90">
-            {name.replace("-", " ")}
+            {name?.replace("-", " ")}
           </h1>
           <p className="text-xs lg:text-sm text-[#677684] dark:text-white/60 max-w-[165px] lg:max-w-[350px]">
-            {handleText(name.replace("-", " "))}
+            {handleText(name?.replace("-", " "))}
           </p>
         </div>
         <div className="flex gap-x-3 items-center">

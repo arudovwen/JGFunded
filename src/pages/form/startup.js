@@ -1,5 +1,5 @@
 import ButtonComponent from "@/components/ButtonComponent";
-import InputField from "@/components/forms/InputField";
+import FormField from "@/components/forms/FormField";
 import WebLayout from "@/components/layouts/WebLayout";
 import {
   StartupFormSchema,
@@ -12,7 +12,7 @@ import Head from "next/head";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import TextField from "@/components/forms/TextField";
-import CustomSelect from "@/components/forms/Select";
+import CustomFormSelect from "@/components/forms/FormSelect";
 import UploadField from "@/components/forms/UploadField";
 import CurrencyField from "@/components/forms/CurrencyField";
 
@@ -47,14 +47,14 @@ export default function StartupForm() {
             className="grid grid-cols-1 gap-y-6"
           >
             <div className="grid lg:grid-cols-2 gap-y-6 lg:gap-y-0 lg:gap-x-6">
-              <InputField
+              <FormField
                 label="First name*"
                 name="firstName"
                 errors={errors}
                 register={register}
                 className="h-10"
               />
-              <InputField
+              <FormField
                 label="Last name*"
                 name="lastName"
                 errors={errors}
@@ -63,7 +63,7 @@ export default function StartupForm() {
               />
             </div>
             <div className="grid lg:grid-cols-2 gap-y-6 lg:gap-y-0 lg:gap-x-6">
-              <InputField
+              <FormField
                 label="Email*"
                 name="email"
                 errors={errors}
@@ -71,7 +71,7 @@ export default function StartupForm() {
                 className="h-10"
                 type="email"
               />
-              <InputField
+              <FormField
                 label="Telegram"
                 name="telegram"
                 errors={errors}
@@ -80,14 +80,14 @@ export default function StartupForm() {
               />
             </div>
             <div className="grid lg:grid-cols-2 gap-y-6 lg:gap-y-0 lg:gap-x-6">
-              <InputField
+              <FormField
                 label="Company name*"
                 name="companyName"
                 errors={errors}
                 register={register}
                 className="h-10"
               />
-              <InputField
+              <FormField
                 label="Company website*"
                 name="companyWebsite"
                 errors={errors}
@@ -96,7 +96,7 @@ export default function StartupForm() {
               />
             </div>
             <div>
-              <InputField
+              <FormField
                 label="Company based country*"
                 name="companyCountry"
                 errors={errors}
@@ -110,7 +110,7 @@ export default function StartupForm() {
                 <h2 className="mb-4 font-medium">Category*</h2>
                 <div className="grid lg:grid-cols-2 gap-4">
                   {Categories.map((item) => (
-                    <InputField
+                    <FormField
                       key={item}
                       label={item}
                       name="categories"
@@ -127,7 +127,7 @@ export default function StartupForm() {
                 <h2 className="mb-4 font-medium">Business Model *</h2>
                 <div className="grid grid-cols-1 gap-4">
                   {BusinessModels.map((item) => (
-                    <InputField
+                    <FormField
                       key={item}
                       label={item}
                       name="businessModel"
@@ -142,7 +142,7 @@ export default function StartupForm() {
               </div>
             </div>
             <div className="grid lg:grid-cols-2 gap-y-6 lg:gap-y-0 lg:gap-x-6">
-              <CustomSelect
+              <CustomFormSelect
                 label="What is your product development stage? *"
                 name="prodDevStage"
                 options={DevelopmentStages}
@@ -150,9 +150,9 @@ export default function StartupForm() {
                 register={register}
                 className="h-10 py-2"
                 setValue={setValue}
-                placeholder="Select"
+                placeholder="FormSelect"
               />
-              <CustomSelect
+              <CustomFormSelect
                 label="Funding stage"
                 name="fundingStage"
                 options={FundingStages}
@@ -160,7 +160,7 @@ export default function StartupForm() {
                 register={register}
                 className="h-10 py-2"
                 setValue={setValue}
-                placeholder="Select"
+                placeholder="FormSelect"
               />
             </div>
             <div className="grid lg:grid-cols-2 gap-y-6 lg:gap-y-0 lg:gap-x-6">
@@ -182,7 +182,7 @@ export default function StartupForm() {
               />
             </div>
             <div className="grid lg:grid-cols-2 gap-y-6 lg:gap-y-0 lg:gap-x-6">
-              <InputField
+              <FormField
                 label="Number of founders*"
                 name="no_of_founders"
                 errors={errors}
@@ -190,7 +190,7 @@ export default function StartupForm() {
                 className="h-10"
                 type="number"
               />
-              <InputField
+              <FormField
                 label="Number of employees*"
                 name="no_of_employees"
                 errors={errors}
@@ -242,7 +242,7 @@ export default function StartupForm() {
               />
             </div>
             <div className="grid lg:grid-cols-2 gap-y-6 lg:gap-y-0 lg:gap-x-6">
-              <InputField
+              <FormField
                 label="Video URL"
                 name="videoUrl"
                 errors={errors}
@@ -253,35 +253,35 @@ export default function StartupForm() {
             <div>
               <h2 className="mb-4 font-medium">Socials</h2>
               <div className="grid lg:grid-cols-2 gap-6">
-                <InputField
+                <FormField
                   label="Linkedin Page"
                   name="linkedin"
                   errors={errors}
                   register={register}
                   className="h-10"
                 />
-                <InputField
+                <FormField
                   label="Twitter Page"
                   name="twitter"
                   errors={errors}
                   register={register}
                   className="h-10"
                 />
-                <InputField
+                <FormField
                   label="Facebook Page"
                   name="facebook"
                   errors={errors}
                   register={register}
                   className="h-10"
                 />
-                <InputField
+                <FormField
                   label="Telegram Community"
                   name="telegram"
                   errors={errors}
                   register={register}
                   className="h-10"
                 />
-                <InputField
+                <FormField
                   label="Discord Community"
                   name="discord"
                   errors={errors}
@@ -291,7 +291,7 @@ export default function StartupForm() {
               </div>
             </div>
             <div className="grid">
-              <InputField
+              <FormField
                 label="I agree to allow JGFunding store and process my personal data according to the privacy policy"
                 name="agree"
                 errors={errors}

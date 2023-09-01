@@ -1,5 +1,5 @@
 import ButtonComponent from "@/components/ButtonComponent";
-import InputField from "@/components/forms/InputField";
+import FormField from "@/components/forms/FormField";
 import WebLayout from "@/components/layouts/WebLayout";
 import { InvestorFormSchema } from "@/utils/form";
 import Head from "next/head";
@@ -44,7 +44,7 @@ export default function InvestorForm() {
             onSubmit={handleSubmit(onSubmit)}
             className="grid grid-cols-1 gap-y-6"
           >
-            <InputField
+            <FormField
               label="First name*"
               name="firstName"
               errors={errors}
@@ -52,7 +52,7 @@ export default function InvestorForm() {
               className="h-10 max-w-auto"
               maxW="max-w-auto"
             />
-            <InputField
+            <FormField
               label="Last name*"
               name="lastName"
               errors={errors}
@@ -61,7 +61,7 @@ export default function InvestorForm() {
               maxW="max-w-auto"
             />
 
-            <InputField
+            <FormField
               label="Email*"
               name="email"
               errors={errors}
@@ -71,7 +71,7 @@ export default function InvestorForm() {
               maxW="max-w-auto"
             />
 
-            <InputField
+            <FormField
               label="Company name*"
               name="companyName"
               errors={errors}
@@ -80,7 +80,7 @@ export default function InvestorForm() {
               maxW="max-w-auto"
             />
 
-            <InputField
+            <FormField
               label="Telegram"
               name="telegram"
               errors={errors}
@@ -88,7 +88,7 @@ export default function InvestorForm() {
               className="h-10"
               maxW="max-w-auto"
             />
-            <InputField
+            <FormField
               label="Linkedin "
               name="linkedin"
               errors={errors}
