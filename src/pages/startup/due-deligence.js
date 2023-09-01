@@ -5,7 +5,9 @@ import IndexComponent from "@/components/startup-dashboard/deligence/IndexCompon
 export default function DueDeligence() {
   return (
     <DashboardLayout>
+
       <IndexComponent />
+      
     </DashboardLayout>
   );
 }
