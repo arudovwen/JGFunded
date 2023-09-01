@@ -25,7 +25,7 @@ export default function CustomSelect({
     return () => {
       setValue(name, "");
     };
-  }, [selected]);
+  }, [name, register, selected, setValue]);
 
   return (
     <div>
