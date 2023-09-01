@@ -1,2 +1,2 @@
 JGFunded.com
-updated monday
+updated Friday
