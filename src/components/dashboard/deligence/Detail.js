@@ -10,7 +10,7 @@ import EditorConvertToHTML from "@/components/Editor";
 export default function Detail({ handleClick, detail }) {
   const type = ["startup", "early stage"];
   return (
-    <div className="h-full flex flex-col justify-between">
+    <div className="h-full flex flex-col justify-between gap-y-10">
       <div>
         <div className="flex items-center gap-x-2 mb-[14px]">
           <Image

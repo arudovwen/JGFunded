@@ -39,7 +39,7 @@ export default function StartupForm() {
       </Head>
       <WebLayout>
         <div className=" border-b border-[#0a142f1a] dark:border-white/40">
-          <div className="pt-20 bg-white dark:bg-black mb-28 lg:mb-[140px] container max-w-[800px] mx-auto">
+          <div className="pt-20 bg-white dark:bg-black mb-28 lg:mb-[140px] container max-w-[800px] mx-auto px-6">
             <legend className="text-3xl mb-10 text-center dark:text-white/80 font-bold">
               Submit your Web3 Startup to or database
             </legend>

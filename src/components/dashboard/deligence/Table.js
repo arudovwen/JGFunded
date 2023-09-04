@@ -6,7 +6,7 @@ import moment from "moment";
 import PreLoader from "@/components/Loader";
 
 export default function Table() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [detail, setDetail] = useState(null);
   const headers = ["startup", "latest information", "date", "actions"];
   const [loading, setLoading] = useState(true);

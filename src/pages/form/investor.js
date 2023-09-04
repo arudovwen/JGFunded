@@ -30,7 +30,7 @@ export default function InvestorForm() {
       </Head>
       <WebLayout>
         <div className=" border-b border-[#0a142f1a] dark:border-white/40">
-          <div className="pt-20 bg-white dark:bg-black mb-28 lg:mb-[140px] container max-w-[600px] mx-auto">
+          <div className="pt-20 bg-white dark:bg-black mb-28 lg:mb-[140px] container max-w-[600px] mx-auto px-6">
             <legend className="text-3xl mb-10 text-center dark:text-white/80 font-bold">
               Get In touch as an Investor
             </legend>

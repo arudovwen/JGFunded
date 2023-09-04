@@ -17,10 +17,10 @@ export default function TopBar() {
     setSelectedOption(option);
   };
   return (
-    <div className="flex flex-col lg:flex-row gap-y-3 lg:gap-y-0 justify-between items-center mb-9">
-      <div className="flex lg:gap-x-8 items-center dark:text-white/70 ">
+    <div className="flex flex-col lg:flex-row gap-y-3 lg:gap-y-0 justify-between items-center mb-9 gap-x-8">
+      <div className="flex gap-x-8 items-center dark:text-white/70 w-full sm:w-auto justify-between sm:justify-start">
         <div>
-          <span className=" mb-1 text-[#3A434B] dark:text-white/70 text-sm font-bold flex items-center gap-x-2">
+          <span className=" mb-1 text-[#3A434B] dark:text-white/70 text-sm font-bold flex items-center gap-x-2 ">
             <span>Overview</span> <BsInfoCircle className="text-xs" />
           </span>
           <div className="flex gap-x-1 items-center">
@@ -32,7 +32,7 @@ export default function TopBar() {
         </div>
         <div >
           <div className="text-[#3A434B] dark:text-white/70  text-base font-bold">65%</div>
-          <div className="text-[#3A434B] dark:text-white/70  text-xs font-normal">
+          <div className="text-[#3A434B] dark:text-white/70  text-xs font-normal whitespace-nowrap">
             Matching Average
           </div>
         </div>

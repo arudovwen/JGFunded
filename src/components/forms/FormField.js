@@ -31,10 +31,10 @@ export default function FormField({
       <div className="flex items-center relative">
         {isCheckbox ? ( // Check if it's a checkbox
           <div>
-            <label className="text-sm text-[#686878] flex gap-x-2 items-center whitespace-nowrap">
+            <label className="text-sm text-[#686878] flex gap-x-2 items-start whitespace-nowrap">
               {" "}
               <input
-                className={merged}
+                  className={`${merged} w-auto mt-1`}
                 type="checkbox"
                 value={name}
                 {...register(name)}
@@ -44,10 +44,10 @@ export default function FormField({
           </div>
         ) : isRadio ? (
           <div>
-            <label className="text-sm text-[#686878] flex gap-x-2 items-center whitespace-nowrap">
+            <label className="text-sm text-[#686878] flex gap-x-2 items-start">
               {" "}
               <input
-                className={merged}
+                className={`${merged} w-auto mt-1`}
                 type="checkbox"
                 {...register(name)}
               />{" "}
