@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import ButtonComponent from "@/components/ButtonComponent";
 import FormField from "@/components/forms/FormField";
 import WebLayout from "@/components/layouts/WebLayout";
@@ -6,6 +7,8 @@ import Head from "next/head";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import TextField from "@/components/forms/TextField";
+import { useRouter } from "next/router";
+import { actions } from "@/services/waitlistservice";
 
 export default function InvestorForm() {
   const {
@@ -18,7 +21,24 @@ export default function InvestorForm() {
     resolver: yupResolver(InvestorFormSchema),
   });
 
-  const onSubmit = (data) => console.log(data);
+  const router = useRouter();
+  const email = router.query.email;
+  useEffect(() => {
+    setValue("type", "investor");
+    setValue("emailAddress", email);
+  }, [email]);
+  const [loading, setloading] = useState(false);
+  const onSubmit = (data) => {
+    setloading(true);
+    console.log("🚀 ~ file: startup.js:38 ~ StartupForm ~ data:", data);
+    actions.addToWaitlist(data).then((response) => {
+      console.log(
+        "🚀 ~ file: startup.js:40 ~ actions.addToWaitlist ~ response:",
+        response
+      );
+    });
+  };
+
   return (
     <>
       <Head>
@@ -48,7 +68,7 @@ export default function InvestorForm() {
               <FormField
                 label="First name*"
                 name="firstName"
-                errors={errors}
+                errors={errors.firstName}
                 register={register}
                 className="h-10 max-w-auto"
                 maxW="max-w-auto"
@@ -56,7 +76,7 @@ export default function InvestorForm() {
               <FormField
                 label="Last name*"
                 name="lastName"
-                errors={errors}
+                errors={errors.lastName}
                 register={register}
                 className="h-10"
                 maxW="max-w-auto"
@@ -64,8 +84,8 @@ export default function InvestorForm() {
 
               <FormField
                 label="Email*"
-                name="email"
-                errors={errors}
+                name="emailAddress"
+                errors={errors.emailAddress}
                 register={register}
                 className="h-10"
                 type="email"
@@ -74,8 +94,8 @@ export default function InvestorForm() {
 
               <FormField
                 label="Company name*"
-                name="companyName"
-                errors={errors}
+                name="company.name"
+                errors={errors?.company?.name}
                 register={register}
                 className="h-10"
                 maxW="max-w-auto"
@@ -83,16 +103,16 @@ export default function InvestorForm() {
 
               <FormField
                 label="Telegram"
-                name="telegram"
-                errors={errors}
+                name="socials.telegram"
+                errors={errors?.socials?.telegram}
                 register={register}
                 className="h-10"
                 maxW="max-w-auto"
               />
               <FormField
                 label="Linkedin "
-                name="linkedin"
-                errors={errors}
+                name="socials.linkedIn"
+                errors={errors?.socials?.linkedIn}
                 register={register}
                 className="h-10"
                 maxW="max-w-auto"
@@ -100,12 +120,15 @@ export default function InvestorForm() {
               <TextField
                 label="Message *"
                 name="message"
-                errors={errors}
+                errors={errors.message}
                 register={register}
               />
 
               <div className="flex justify-center">
-                <ButtonComponent className="bg-primary text-white">
+                <ButtonComponent
+                  isLoading={loading}
+                  className="bg-primary text-white"
+                >
                   Submit
                 </ButtonComponent>
               </div>

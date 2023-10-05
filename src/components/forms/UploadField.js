@@ -17,13 +17,27 @@ export default function UploadField({
 
     if (file) {
       try {
-        // Replace this with your actual file upload function that returns a URL
-        const uploadedUrl = await uploadFile(file);
+        // Read the file as a data URL (Base64)
+        const reader = new FileReader();
 
-        setUploadedFileUrl(uploadedUrl);
-        setValue(name, uploadedUrl); // Set the URL value using setValue
+        reader.onload = (e) => {
+          const base64DataUrl = e.target.result;
+          console.log("🚀 ~ file: UploadField.js:25 ~ handleFileUpload ~ base64DataUrl:", base64DataUrl)
+
+          // Replace this with your actual file upload function that returns a URL
+          // uploadFile(base64DataUrl)
+          //   .then((uploadedUrl) => {
+          setUploadedFileUrl(file.name);
+          setValue(name, base64DataUrl); // Set the Base64 encoded string as the value
+          // })
+          // .catch((error) => {
+          //   console.error("Error uploading file:", error);
+          // });
+        };
+
+        reader.readAsDataURL(file);
       } catch (error) {
-        console.error("Error uploading file:", error);
+        console.error("Error reading file:", error);
       }
     }
   };
@@ -40,7 +54,7 @@ export default function UploadField({
             merged
           )}
           placeholder={placeholder}
-          {...register(name)}
+          
           type="file"
           onChange={handleFileUpload}
         />
@@ -50,9 +64,7 @@ export default function UploadField({
           <span>Uploaded file: {uploadedFileUrl}</span>
         </div>
       )}
-      {errors[name] && (
-        <span className="text-sm text-red-500">{errors[name].message}</span>
-      )}
+      {errors && <span className="text-sm text-red-500">{errors.message}</span>}
     </div>
   );
 }

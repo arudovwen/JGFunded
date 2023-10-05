@@ -18,7 +18,7 @@ export default function CurrencyField({
   const handleValueChange = (value, name) => {
     if (value) {
       setValue(name, value);
-      clearError(name); // Clear the error for this field
+      // clearError(name); // Clear the error for this field
     }
   };
 
@@ -47,8 +47,8 @@ export default function CurrencyField({
         className={merged}
       />
 
-      {errors[name] && (
-        <span className="text-sm text-red-500">{errors[name].message}</span>
+      {errors && (
+        <span className="text-sm text-red-500">{errors.message}</span>
       )}
     </div>
   );

@@ -81,8 +81,8 @@ export default function CustomSelect({
           </Transition>
         </div>
       </Listbox>
-      {errors[name] && (
-        <span className="text-sm text-red-500">{errors[name].message}</span>
+      {errors && (
+        <span className="text-sm text-red-500">{errors.message}</span>
       )}
     </div>
   );

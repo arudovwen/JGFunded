@@ -6,9 +6,10 @@ import { Carousel } from "react-responsive-carousel";
 
 import ScrollAnimation from "react-animate-on-scroll";
 import ButtonComponent from "../ButtonComponent";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 function Waitlist() {
+  const router = useRouter();
   const keys = [
     "Market sizing",
     "Geographical benchmarking",
@@ -16,6 +17,18 @@ function Waitlist() {
     "Industry benchmarking",
   ];
   const [value, setValue] = React.useState(1);
+  const [email, setEmail] = React.useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    
+   
+    router.push(
+      value === 1
+        ? `/form/startup?email=${encodeURIComponent(email)}`
+        : `/form/investor?email=${encodeURIComponent(email)}`
+    );
+  }
 
   return (
     <section
@@ -68,7 +81,7 @@ function Waitlist() {
               </div>
             </Carousel>
             <div className="">
-              <form className="max-w-[464px] ml-auto">
+              <form onSubmit={handleSubmit} className="max-w-[464px] ml-auto">
                 <legend className="text-white text-2xl font-medium mb-8">
                   Join the waiting list
                 </legend>
@@ -77,9 +90,11 @@ function Waitlist() {
                     Email address
                   </label>
                   <input
-                  type="email"
+                    type="email"
+                    onChange={(e) => setEmail(e.target.value)}
                     className="w-full bg-white px-4 py-4 rounded-lg"
                     placeholder="example@mail.com"
+                    required
                   />
                 </div>
                 <div className="mb-6">
@@ -87,6 +102,7 @@ function Waitlist() {
                     Select customer type
                   </label>
                   <select
+                    required
                     value={value}
                     onChange={(e) => setValue(e.target.value)}
                     className="w-full bg-white px-4 py-4 rounded-lg text-[#333]"
@@ -95,23 +111,14 @@ function Waitlist() {
                     <option value={2}>Investor</option>
                   </select>
                 </div>
-               
+
                 <div>
-                  <a
-                   
-                    href={
-                      value === 1
-                        ? "/form/startup"
-                        : "/form/investor"
-                    }
+                  <ButtonComponent
+                    type="submit"
+                    className="bg-primary text-white w-full text-center justify-center"
                   >
-                    <ButtonComponent
-                      type="button"
-                      className="bg-primary text-white w-full text-center justify-center"
-                    >
-                      Join Us
-                    </ButtonComponent>
-                  </a>
+                    Join Us
+                  </ButtonComponent>
                 </div>
               </form>
             </div>

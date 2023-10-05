@@ -10,10 +10,11 @@ export default function FormField({
   type,
   className = "",
   register,
+  value,
   errors,
   isCheckbox = false, // Add this prop to indicate if it's a checkbox
   isRadio = false,
-  maxW="max-w-[374px]"
+  maxW = "max-w-[374px]",
 }) {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
@@ -25,7 +26,7 @@ export default function FormField({
 
   return (
     <div className={`w-full ${maxW}`}>
-      {(label && !isCheckbox && !isRadio) && (
+      {label && !isCheckbox && !isRadio && (
         <label className="block text-sm text-[#686878] mb-2">{label}</label>
       )}
       <div className="flex items-center relative">
@@ -34,9 +35,9 @@ export default function FormField({
             <label className="text-sm text-[#686878] flex gap-x-2 items-start whitespace-nowrap">
               {" "}
               <input
-                  className={`${merged} w-auto mt-1`}
+                className={`${merged} w-auto mt-1`}
                 type="checkbox"
-                value={name}
+                value={value}
                 {...register(name)}
               />{" "}
               {label}
@@ -78,9 +79,7 @@ export default function FormField({
           </span>
         )}
       </div>
-      {errors[name] && (
-        <span className="text-sm text-red-500">{errors[name].message}</span>
-      )}
+      {errors && <span className="text-sm text-red-500">{errors.message}</span>}
     </div>
   );
 }

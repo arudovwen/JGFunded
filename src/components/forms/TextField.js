@@ -25,8 +25,8 @@ export default function TextField({
         ></textarea>
         {icon && <span className={`text-xl absolute right-4 `}>{icon}</span>}
       </div>
-      {errors[name] && (
-        <span className="text-sm text-red-500">{errors[name].message}</span>
+      {errors && (
+        <span className="text-sm text-red-500">{errors.message}</span>
       )}
     </div>
   );
