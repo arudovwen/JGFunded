@@ -39,13 +39,23 @@ export default function StartupForm() {
   const [loading, setloading] = useState(false);
   const onSubmit = (data) => {
     setloading(true);
-    console.log("🚀 ~ file: startup.js:38 ~ StartupForm ~ data:", data);
-    actions.addToWaitlist(data).then((response) => {
-      console.log(
-        "🚀 ~ file: startup.js:40 ~ actions.addToWaitlist ~ response:",
-        response
-      );
-    });
+
+    actions
+      .addToWaitlist(data)
+      .then((response) => {
+        toast.success("Form submission successful");
+        console.log(
+          "🚀 ~ file: startup.js:40 ~ actions.addToWaitlist ~ response:",
+          response
+        );
+
+        setloading(false);
+        router.push("/");
+      })
+      .catch((err) => {
+        setloading(false);
+        toast.error(err.response.data.message);
+      });
   };
 
   return (

@@ -96,10 +96,8 @@ client.interceptors.response.use(
 
         localStorage.clear();
         window.location.href = `/auth/login?redirect_from=${window.location.href}`;
-      } else if (response.status > 399 && response.status < 500) {
-        toast.error(response.data.message);
       } else {
-        return originalRequest;
+        return Promise.reject(error);;
       }
     }
     return Promise.reject(error);
