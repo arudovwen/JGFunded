@@ -36,11 +36,6 @@ export default function InvestorForm() {
       .addToWaitlist(data)
       .then((response) => {
         toast.success("Form submission successful");
-        console.log(
-          "🚀 ~ file: startup.js:40 ~ actions.addToWaitlist ~ response:",
-          response
-        );
-
         setloading(false);
         router.push("/");
       })

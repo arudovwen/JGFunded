@@ -82,7 +82,7 @@ function Waitlist() {
             </Carousel>
             <div className="">
               <form onSubmit={handleSubmit} className="max-w-[464px] ml-auto">
-                <legend className="text-white text-2xl font-medium mb-8">
+                <legend className="text-white text-2xl font-bold mb-8">
                   Join the waiting list
                 </legend>
                 <div className="mb-6">

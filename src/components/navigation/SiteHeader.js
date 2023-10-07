@@ -95,13 +95,15 @@ function SiteHeader() {
         </div>
         <div id="" className="hidden lg:flex items-center gap-x-8">
           {/* <Link href={"/login"}> */}
+          <Link href="#waitlist">
             <ButtonComponent className="bg-transparent font-medium">
               Login
             </ButtonComponent>
-          {/* </Link> */}
+          </Link>
           {/* <Link href="/onboarding/account-type"> */}
+           <a href="#waitlist">
             <ButtonComponent>Get started</ButtonComponent>
-          {/* </Link> */}
+          </a>
         </div>
         <div className="lg:hidden">
           <Hamburger
