@@ -139,6 +139,11 @@ export default function StartupForm() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-6 gap-x-5">
                 <div className="lg:col-span-2">
                   <h2 className="mb-4 font-medium">Category*</h2>
+                  {errors?.company?.category && (
+                    <span className="text-sm text-red-500">
+                      {errors?.company?.category.message}
+                    </span>
+                  )}
                   <div className="grid lg:grid-cols-2 gap-4">
                     {Categories.map((item) => (
                       <FormField
@@ -146,7 +151,6 @@ export default function StartupForm() {
                         label={item}
                         value={item}
                         name="company.category"
-                        errors={errors?.company?.category}
                         register={register}
                         type="checkbox"
                         isCheckbox
@@ -157,6 +161,11 @@ export default function StartupForm() {
                 </div>
                 <div>
                   <h2 className="mb-4 font-medium">Business Model *</h2>
+                  {errors?.company?.businessModel && (
+                    <span className="text-sm text-red-500">
+                      {errors?.company?.businessModel.message}
+                    </span>
+                  )}
                   <div className="grid grid-cols-1 gap-4">
                     {BusinessModels.map((item) => (
                       <FormField
@@ -164,7 +173,7 @@ export default function StartupForm() {
                         label={item}
                         name="company.businessModel"
                         value={item}
-                        errors={errors?.company?.businessModel}
+                     
                         register={register}
                         type="checkbox"
                         isCheckbox
