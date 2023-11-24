@@ -20,10 +20,10 @@ const links = [
     title: "Careers",
     url: "/careers",
   },
-  {
-    title: "Pricings",
-    url: "/#pricing",
-  },
+  // {
+  //   title: "Pricings",
+  //   url: "/#pricing",
+  // },
   {
     title: "Contact Us",
     url: "/contact-us",
