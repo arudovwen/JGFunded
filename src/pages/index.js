@@ -3,7 +3,7 @@ import Board from "@/components/landing/Board";
 import Join from "@/components/landing/Join";
 import WeHelp from "@/components/landing/WeHelp";
 import Benefits from "@/components/landing/Benefits";
-import Pricing from "@/components/landing/Pricing";
+// import Pricing from "@/components/landing/Pricing";
 import Features from "@/components/landing/Features";
 import Faqs from "@/components/landing/Faqs";
 import Waitlist from "@/components/landing/Waitlist";

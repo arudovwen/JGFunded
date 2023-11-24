@@ -61,11 +61,10 @@ export default function InvestorForm() {
               Get In touch as an Investor
             </legend>
             <p className="mb-10 dark:text-white/70">
-              Get in touch if you are a crypto, web3, blockchain focused VC or
+              Get in touch if you are a Climate-Tech, Health-Tech, FinTech & blockchain focused VC or
               investor and would like to partner with us in order to connect to
               some of the most promising startups, brightest founders and
-              lucrative early stage (but not only!) investment opportunities in
-              the web3 space.
+              lucrative early stage (but not only!) investment opportunities.
             </p>
             <form
               onSubmit={handleSubmit(onSubmit)}
