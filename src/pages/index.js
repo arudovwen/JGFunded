@@ -29,7 +29,7 @@ export default function Home() {
           <WeHelp />
           <Features />
           <Benefits />
-          <Pricing />
+          // <Pricing />
           <Faqs />
           <Waitlist />
         </div>
